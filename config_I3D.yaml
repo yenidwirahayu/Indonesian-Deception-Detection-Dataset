@@ -1,0 +1,110 @@
+dataset:
+  name: I3D
+  version: '1.0'
+  language: Indonesian
+  description: Indonesian Interrogation Deception Dataset
+  citation: 'Please cite: [Your Paper]'
+
+audio:
+  sampling_rate: 16000
+  librosa_params:
+    n_fft: 2048
+    hop_length: 512
+    win_length: 2048
+    window: hann
+    center: true
+    pad_mode: constant
+  enhancement:
+    extreme_boost_threshold: -55
+    max_boost: 40
+    target_dbfs: -18
+    silence_threshold: -50
+    min_pause_duration: 200
+    compression_ratio: 6.0
+    short_speech_threshold: 2000
+    fixed_params: true
+
+video:
+  sample_rate: 1
+  zoom_levels:
+    - 1.5
+    - 2.0
+    - 2.5
+    - 3.0
+    - 4.0
+    - 5.0
+    - 6.0
+    - 8.0
+    - 10.0
+  preprocessing:
+    clahe_clip_limit: 4.0
+    clahe_tile_size: [4, 4]  # PERBAIKAN: list YAML, bukan tuple Python
+    gamma_correction: 1.4
+    unsharp_strength: 1.8
+
+mediapipe:
+  face_mesh:
+    static_image_mode: false
+    max_num_faces: 1
+    refine_landmarks: true
+    min_detection_confidence: 0.2
+    min_tracking_confidence: 0.2
+  pose:
+    static_image_mode: false
+    model_complexity: 1
+    min_detection_confidence: 0.3
+    min_tracking_confidence: 0.3
+
+speech_recognition:
+  language: id-ID
+  max_attempts: 7
+  deterministic_mode: false  # Set true untuk disable dynamic thresholds
+  configs:
+    - energy_threshold: 300
+      pause_threshold: 0.8
+      phrase_threshold: 0.3
+    - energy_threshold: 150
+      pause_threshold: 0.6
+      phrase_threshold: 0.2
+    - energy_threshold: 100
+      pause_threshold: 0.5
+      phrase_threshold: 0.1
+    - energy_threshold: 50
+      pause_threshold: 0.4
+      phrase_threshold: 0.1
+    - energy_threshold: 30
+      pause_threshold: 0.3
+      phrase_threshold: 0.05
+    - energy_threshold: 20
+      pause_threshold: 0.2
+      phrase_threshold: 0.05
+    - energy_threshold: 10
+      pause_threshold: 0.1
+      phrase_threshold: 0.01
+
+text:
+  normalize_numbers: true
+  extract_number_features: true
+  translate_to_english: true
+  use_manual_transcripts: true
+  use_transcript_cache: true
+  use_translation_cache: true
+  force_retranscribe: false
+  sentiment_analysis_note: TextBlob sentiment for Indonesian is proxy only
+
+reextraction:
+  enabled: true
+  auto_trigger: true
+  log_decisions: true
+
+checkpoint:
+  enabled: true
+  save_interval: 5
+
+output:
+  generate_figures: true
+  generate_markdown_report: true
+  generate_data_dictionary: true
+  generate_run_manifest: true
+  figure_dpi: 300
+  csv_encoding: utf-8

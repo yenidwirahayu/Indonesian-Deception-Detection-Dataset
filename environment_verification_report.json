@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-02-03T16:55:50.242142",
+  "python": {
+    "python_version": "3.10.18",
+    "python_implementation": "CPython",
+    "python_build": [
+      "main",
+      "Jun  5 2025 13:08:55"
+    ],
+    "executable": "E:\\ney\\envs\\MSTGNet\\python.exe"
+  },
+  "os": {
+    "system": "Windows",
+    "node": "yenidwirahayu-",
+    "release": "10",
+    "version": "10.0.26100",
+    "machine": "AMD64",
+    "platform": "Windows-10-10.0.26100-SP0"
+  },
+  "cpu": {
+    "processor": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD",
+    "machine": "AMD64"
+  },
+  "ram": {
+    "total_bytes": 68641931264,
+    "total_gb": 63.93,
+    "available_gb": 50.71
+  },
+  "gpu": {
+    "nvidia_smi_present": true,
+    "gpus": [
+      {
+        "name": "NVIDIA GeForce RTX 3060",
+        "driver_version": "560.94",
+        "memory_total_mb": "12288",
+        "compute_capability": "8.6",
+        "uuid": "GPU-846b9b94-2034-71ba-e2fb-35f9f8319cd6"
+      }
+    ],
+    "nvidia_smi_raw": "Tue Feb  3 16:55:50 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 560.94                 Driver Version: 560.94         CUDA Version: 12.6     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3060      WDDM  |   00000000:2B:00.0  On |                  N/A |\n|  0%   43C    P8             13W /  170W |     723MiB /  12288MiB |     11%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A      4500    C+G   ...Programs\\Microsoft VS Code\\Code.exe      N/A      |\n|    0   N/A  N/A      5680    C+G   ...ft Office\\root\\Office16\\WINWORD.EXE      N/A      |\n|    0   N/A  N/A      6232    C+G   ...n\\138.0.3351.121\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A      8728    C+G   C:\\Windows\\System32\\ShellHost.exe           N/A      |\n|    0   N/A  N/A      8904    C+G   C:\\Windows\\explorer.exe                     N/A      |\n|    0   N/A  N/A      9240    C+G   ...oft-Edge-WebView\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A      9476    C+G   ...q1xt\\ScreenshotApp\\ScreenshotHD.exe      N/A      |\n|    0   N/A  N/A      9588    C+G   ...cw5n1h2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A     11568    C+G   ...nt.CBS_cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A     11576    C+G   ...2txyewy\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A     14020    C+G   ....0_x64__kzh8wxbdkxb8p\\DCv2\\DCv2.exe      N/A      |\n|    0   N/A  N/A     14120    C+G   ...t.LockApp_cw5n1h2txyewy\\LockApp.exe      N/A      |\n|    0   N/A  N/A     15604    C+G   ...ekyb3d8bbwe\\PhoneExperienceHost.exe      N/A      |\n|    0   N/A  N/A     16344    C+G   ...CBS_cw5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A     16476    C+G   ...les\\Microsoft OneDrive\\OneDrive.exe      N/A      |\n|    0   N/A  N/A     17736    C+G   ...\\OpenVPN Connect\\OpenVPNConnect.exe      N/A      |\n|    0   N/A  N/A     18280    C+G   ...5n1h2txyewy\\ShellExperienceHost.exe      N/A      |\n|    0   N/A  N/A     19092    C+G   ...crosoft\\Edge\\Application\\msedge.exe      N/A      |\n|    0   N/A  N/A     20676    C+G   ...81.0_x64__8wekyb3d8bbwe\\Copilot.exe      N/A      |\n|    0   N/A  N/A     21484    C+G   ...oogle\\Chrome\\Application\\chrome.exe      N/A      |\n|    0   N/A  N/A     22028    C+G   ...n\\138.0.3351.121\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A     22264    C+G   ...oogle\\Chrome\\Application\\chrome.exe      N/A      |\n|    0   N/A  N/A     22352    C+G   ..._x64__8wekyb3d8bbwe\\M365Copilot.exe      N/A      |\n|    0   N/A  N/A     22680    C+G   ...n\\138.0.3351.121\\msedgewebview2.exe      N/A      |\n+-----------------------------------------------------------------------------------------+"
+  },
+  "optional_libs": {
+    "torch": {
+      "version": "2.0.1+cu118",
+      "cuda_available": true,
+      "cuda_version": "11.8",
+      "cudnn_version": 8700,
+      "gpu_name": "NVIDIA GeForce RTX 3060"
+    },
+    "cupy": {
+      "present": false,
+      "error": "No module named 'cupy'"
+    }
+  }
+}

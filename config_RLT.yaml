@@ -1,0 +1,80 @@
+# RLT Dataset Configuration v8.1 FINAL
+# Scientific Data-ready configuration with all fixes applied
+
+dataset:
+  name: RLT
+  language: English
+  description: Real-Life Truth/Lie Dataset
+
+audio:
+  sampling_rate: 16000
+  
+  # ✅ Explicit librosa parameters for reproducibility
+  librosa_params:
+    n_fft: 2048
+    hop_length: 512
+    win_length: 2048
+    window: hann
+    center: true
+    pad_mode: constant
+  
+  enhancement:
+    extreme_boost_threshold: -55
+    max_boost: 40
+    target_dbfs: -18
+    silence_threshold: -50
+    min_pause_duration: 200
+    compression_ratio: 6.0
+    short_speech_threshold: 2000
+
+video:
+  sample_rate: 1
+  zoom_levels:
+    - 1.5
+    - 2.0
+    - 2.5
+    - 3.0
+    - 4.0
+    - 5.0
+    - 6.0
+    - 8.0
+    - 10.0
+  
+  preprocessing:
+    clahe_clip_limit: 4.0
+    clahe_tile_size: [4, 4]  # ✅ FIXED: List instead of tuple
+    gamma_correction: 1.4
+    unsharp_strength: 1.8
+
+mediapipe:
+  face_mesh:
+    static_image_mode: false
+    max_num_faces: 1
+    refine_landmarks: true  # 478 landmarks (with iris)
+    min_detection_confidence: 0.2
+    min_tracking_confidence: 0.2
+  
+  pose:
+    static_image_mode: false
+    model_complexity: 1
+    min_detection_confidence: 0.3
+    min_tracking_confidence: 0.3
+
+text:
+  normalize_numbers: true
+  extract_number_features: true
+  use_pretranscribed: true
+  translate_to_indonesian: true
+
+output:
+  generate_figures: true
+  generate_markdown_report: true
+  generate_data_dictionary: true
+  figure_dpi: 300
+  csv_encoding: utf-8
+
+# ✅ Reproducibility settings
+reproducibility:
+  capture_environment: true
+  save_run_manifest: true
+  validate_landmark_counts: true
