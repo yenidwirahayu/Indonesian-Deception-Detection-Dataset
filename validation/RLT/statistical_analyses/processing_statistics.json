@@ -1,0 +1,23 @@
+{
+  "total_files": 121,
+  "successful_text_loads": 121,
+  "failed_text_loads": 0,
+  "numbers_normalized": 34,
+  "texts_with_numbers": 43,
+  "texts_with_vague": 48,
+  "texts_with_exact": 6,
+  "successful_translations": 121,
+  "failed_translations": 0,
+  "cached_translations": 4,
+  "new_translations": 117,
+  "successful_audio_extractions": 121,
+  "failed_audio_extractions": 0,
+  "successful_landmark_extractions": 121,
+  "failed_landmark_extractions": 0,
+  "total_frames_processed": 90505,
+  "face_detected": 86248,
+  "iris_detected": 86248,
+  "pose_detected": 89583,
+  "pause_features_extracted": 77,
+  "errors": []
+}
