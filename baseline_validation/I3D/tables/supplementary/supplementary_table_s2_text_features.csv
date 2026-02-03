@@ -1,0 +1,7 @@
+Rank,Feature Name,Consensus Score,RF Importance,MI Score,F-Score,RFE Rank
+1,char_count_en,0.178741,0.000000,0.000000,0.0000,-
+2,sentiment_en,0.171752,0.000000,0.000000,0.0000,-
+3,subjectivity_en,0.171266,0.000000,0.000000,0.0000,-
+4,complexity_en,0.165961,0.000000,0.000000,0.0000,-
+5,lexical_diversity_en,0.156544,0.000000,0.000000,0.0000,-
+6,word_count_en,0.155735,0.000000,0.000000,0.0000,-

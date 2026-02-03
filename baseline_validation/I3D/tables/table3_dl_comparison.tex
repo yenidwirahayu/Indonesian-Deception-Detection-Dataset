@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering
+\caption{Deep Learning vs Traditional ML Performance Comparison}
+\label{tab:dl_comparison}
+\begin{tabular}{llcccccc}
+\toprule
+Category & Model & Architecture & Accuracy & Precision & Recall & F1-Score & ROC-AUC \\
+\midrule
+Deep Learning & LSTM (audio) & Bi-LSTM: 64 units × 2 layers & 0.5127 & 0.5128 & 0.5096 & 0.5112 & 0.5381 \\
+Deep Learning & CNN (audio) & 1D-CNN: 64 filters × 2 layers & 0.5255 & 0.5299 & 0.4522 & 0.4880 & 0.5248 \\
+Traditional ML & Random Forest (landmark) & Traditional ML & 0.6433 & 0.6380 & 0.6624 & 0.6500 & 0.7159 \\
+\bottomrule
+\end{tabular}
+\end{table}

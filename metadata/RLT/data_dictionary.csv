@@ -1,0 +1,149 @@
+column_name,data_type,description,unit,range
+filename,string,Video filename,N/A,N/A
+text_english_original,string,Original English transcription,N/A,N/A
+text_english_normalized,string,English transcription with numbers normalized to words,N/A,N/A
+text_indonesian,string,Indonesian translation,N/A,N/A
+label,integer,"Class label (0=truth, 1=lie)",N/A,0-1
+dataset,string,Dataset identifier,N/A,RLT
+has_numbers,boolean,Whether text contains numbers,N/A,True/False
+number_count,integer,Total count of numbers in text,count,0-∞
+has_vague_quantifiers,boolean,"Contains vague quantifiers (about, around, etc.)",N/A,True/False
+has_exact_quantifiers,boolean,"Contains exact quantifiers (exactly, precisely, etc.)",N/A,True/False
+number_word_ratio,float,Ratio of number words to total words,ratio,0.0-1.0
+has_large_numbers,boolean,Contains numbers > 1000,N/A,True/False
+has_decimal_numbers,boolean,Contains decimal numbers,N/A,True/False
+char_count_en_original,integer,Character count - English (Original),characters,0-∞
+word_count_en_original,integer,Word count - English (Original),words,0-∞
+sentiment_en_original,float,Sentiment polarity - English (Original),polarity,-1.0 to 1.0
+subjectivity_en_original,float,Subjectivity score - English (Original),score,0.0-1.0
+complexity_en_original,float,Text complexity - English (Original),score,0.0-∞
+lexical_diversity_en_original,float,Lexical diversity - English (Original),ratio,0.0-1.0
+char_count_en,integer,Character count - English (Normalized),characters,0-∞
+word_count_en,integer,Word count - English (Normalized),words,0-∞
+sentiment_en,float,Sentiment polarity - English (Normalized),polarity,-1.0 to 1.0
+subjectivity_en,float,Subjectivity score - English (Normalized),score,0.0-1.0
+complexity_en,float,Text complexity - English (Normalized),score,0.0-∞
+lexical_diversity_en,float,Lexical diversity - English (Normalized),ratio,0.0-1.0
+char_count_id,integer,Character count - Indonesian,characters,0-∞
+word_count_id,integer,Word count - Indonesian,words,0-∞
+sentiment_id,float,Sentiment polarity - Indonesian,polarity,-1.0 to 1.0
+subjectivity_id,float,Subjectivity score - Indonesian,score,0.0-1.0
+complexity_id,float,Text complexity - Indonesian,score,0.0-∞
+lexical_diversity_id,float,Lexical diversity - Indonesian,ratio,0.0-1.0
+audio_quality_score,float,Overall audio quality score,score,0.0-1.0
+audio_duration,float,Audio duration,seconds,0.0-∞
+audio_snr,float,Signal-to-noise ratio,dB,-∞ to ∞
+audio_rms,float,Root mean square energy,amplitude,0.0-1.0
+audio_spectral_centroid,float,Spectral centroid,Hz,0.0-∞
+audio_dynamic_range,float,Dynamic range,amplitude,0.0-2.0
+mfcc1_mean,float,Audio feature: mfcc1_mean,feature value,-∞ to ∞
+mfcc1_std,float,Audio feature: mfcc1_std,feature value,-∞ to ∞
+mfcc2_mean,float,Audio feature: mfcc2_mean,feature value,-∞ to ∞
+mfcc2_std,float,Audio feature: mfcc2_std,feature value,-∞ to ∞
+mfcc3_mean,float,Audio feature: mfcc3_mean,feature value,-∞ to ∞
+mfcc3_std,float,Audio feature: mfcc3_std,feature value,-∞ to ∞
+mfcc4_mean,float,Audio feature: mfcc4_mean,feature value,-∞ to ∞
+mfcc4_std,float,Audio feature: mfcc4_std,feature value,-∞ to ∞
+mfcc5_mean,float,Audio feature: mfcc5_mean,feature value,-∞ to ∞
+mfcc5_std,float,Audio feature: mfcc5_std,feature value,-∞ to ∞
+mfcc6_mean,float,Audio feature: mfcc6_mean,feature value,-∞ to ∞
+mfcc6_std,float,Audio feature: mfcc6_std,feature value,-∞ to ∞
+mfcc7_mean,float,Audio feature: mfcc7_mean,feature value,-∞ to ∞
+mfcc7_std,float,Audio feature: mfcc7_std,feature value,-∞ to ∞
+mfcc8_mean,float,Audio feature: mfcc8_mean,feature value,-∞ to ∞
+mfcc8_std,float,Audio feature: mfcc8_std,feature value,-∞ to ∞
+mfcc9_mean,float,Audio feature: mfcc9_mean,feature value,-∞ to ∞
+mfcc9_std,float,Audio feature: mfcc9_std,feature value,-∞ to ∞
+mfcc10_mean,float,Audio feature: mfcc10_mean,feature value,-∞ to ∞
+mfcc10_std,float,Audio feature: mfcc10_std,feature value,-∞ to ∞
+mfcc11_mean,float,Audio feature: mfcc11_mean,feature value,-∞ to ∞
+mfcc11_std,float,Audio feature: mfcc11_std,feature value,-∞ to ∞
+mfcc12_mean,float,Audio feature: mfcc12_mean,feature value,-∞ to ∞
+mfcc12_std,float,Audio feature: mfcc12_std,feature value,-∞ to ∞
+mfcc13_mean,float,Audio feature: mfcc13_mean,feature value,-∞ to ∞
+mfcc13_std,float,Audio feature: mfcc13_std,feature value,-∞ to ∞
+delta_mfcc1_mean,float,Audio feature: delta_mfcc1_mean,feature value,-∞ to ∞
+delta_mfcc1_std,float,Audio feature: delta_mfcc1_std,feature value,-∞ to ∞
+delta_mfcc2_mean,float,Audio feature: delta_mfcc2_mean,feature value,-∞ to ∞
+delta_mfcc2_std,float,Audio feature: delta_mfcc2_std,feature value,-∞ to ∞
+delta_mfcc3_mean,float,Audio feature: delta_mfcc3_mean,feature value,-∞ to ∞
+delta_mfcc3_std,float,Audio feature: delta_mfcc3_std,feature value,-∞ to ∞
+delta_mfcc4_mean,float,Audio feature: delta_mfcc4_mean,feature value,-∞ to ∞
+delta_mfcc4_std,float,Audio feature: delta_mfcc4_std,feature value,-∞ to ∞
+delta_mfcc5_mean,float,Audio feature: delta_mfcc5_mean,feature value,-∞ to ∞
+delta_mfcc5_std,float,Audio feature: delta_mfcc5_std,feature value,-∞ to ∞
+delta_mfcc6_mean,float,Audio feature: delta_mfcc6_mean,feature value,-∞ to ∞
+delta_mfcc6_std,float,Audio feature: delta_mfcc6_std,feature value,-∞ to ∞
+delta_mfcc7_mean,float,Audio feature: delta_mfcc7_mean,feature value,-∞ to ∞
+delta_mfcc7_std,float,Audio feature: delta_mfcc7_std,feature value,-∞ to ∞
+delta_mfcc8_mean,float,Audio feature: delta_mfcc8_mean,feature value,-∞ to ∞
+delta_mfcc8_std,float,Audio feature: delta_mfcc8_std,feature value,-∞ to ∞
+delta_mfcc9_mean,float,Audio feature: delta_mfcc9_mean,feature value,-∞ to ∞
+delta_mfcc9_std,float,Audio feature: delta_mfcc9_std,feature value,-∞ to ∞
+delta_mfcc10_mean,float,Audio feature: delta_mfcc10_mean,feature value,-∞ to ∞
+delta_mfcc10_std,float,Audio feature: delta_mfcc10_std,feature value,-∞ to ∞
+delta_mfcc11_mean,float,Audio feature: delta_mfcc11_mean,feature value,-∞ to ∞
+delta_mfcc11_std,float,Audio feature: delta_mfcc11_std,feature value,-∞ to ∞
+delta_mfcc12_mean,float,Audio feature: delta_mfcc12_mean,feature value,-∞ to ∞
+delta_mfcc12_std,float,Audio feature: delta_mfcc12_std,feature value,-∞ to ∞
+delta_mfcc13_mean,float,Audio feature: delta_mfcc13_mean,feature value,-∞ to ∞
+delta_mfcc13_std,float,Audio feature: delta_mfcc13_std,feature value,-∞ to ∞
+delta2_mfcc1_mean,float,Audio feature: delta2_mfcc1_mean,feature value,-∞ to ∞
+delta2_mfcc1_std,float,Audio feature: delta2_mfcc1_std,feature value,-∞ to ∞
+delta2_mfcc2_mean,float,Audio feature: delta2_mfcc2_mean,feature value,-∞ to ∞
+delta2_mfcc2_std,float,Audio feature: delta2_mfcc2_std,feature value,-∞ to ∞
+delta2_mfcc3_mean,float,Audio feature: delta2_mfcc3_mean,feature value,-∞ to ∞
+delta2_mfcc3_std,float,Audio feature: delta2_mfcc3_std,feature value,-∞ to ∞
+delta2_mfcc4_mean,float,Audio feature: delta2_mfcc4_mean,feature value,-∞ to ∞
+delta2_mfcc4_std,float,Audio feature: delta2_mfcc4_std,feature value,-∞ to ∞
+delta2_mfcc5_mean,float,Audio feature: delta2_mfcc5_mean,feature value,-∞ to ∞
+delta2_mfcc5_std,float,Audio feature: delta2_mfcc5_std,feature value,-∞ to ∞
+delta2_mfcc6_mean,float,Audio feature: delta2_mfcc6_mean,feature value,-∞ to ∞
+delta2_mfcc6_std,float,Audio feature: delta2_mfcc6_std,feature value,-∞ to ∞
+delta2_mfcc7_mean,float,Audio feature: delta2_mfcc7_mean,feature value,-∞ to ∞
+delta2_mfcc7_std,float,Audio feature: delta2_mfcc7_std,feature value,-∞ to ∞
+delta2_mfcc8_mean,float,Audio feature: delta2_mfcc8_mean,feature value,-∞ to ∞
+delta2_mfcc8_std,float,Audio feature: delta2_mfcc8_std,feature value,-∞ to ∞
+delta2_mfcc9_mean,float,Audio feature: delta2_mfcc9_mean,feature value,-∞ to ∞
+delta2_mfcc9_std,float,Audio feature: delta2_mfcc9_std,feature value,-∞ to ∞
+delta2_mfcc10_mean,float,Audio feature: delta2_mfcc10_mean,feature value,-∞ to ∞
+delta2_mfcc10_std,float,Audio feature: delta2_mfcc10_std,feature value,-∞ to ∞
+delta2_mfcc11_mean,float,Audio feature: delta2_mfcc11_mean,feature value,-∞ to ∞
+delta2_mfcc11_std,float,Audio feature: delta2_mfcc11_std,feature value,-∞ to ∞
+delta2_mfcc12_mean,float,Audio feature: delta2_mfcc12_mean,feature value,-∞ to ∞
+delta2_mfcc12_std,float,Audio feature: delta2_mfcc12_std,feature value,-∞ to ∞
+delta2_mfcc13_mean,float,Audio feature: delta2_mfcc13_mean,feature value,-∞ to ∞
+delta2_mfcc13_std,float,Audio feature: delta2_mfcc13_std,feature value,-∞ to ∞
+bark_energy_mean,float,Audio feature: bark_energy_mean,feature value,-∞ to ∞
+bark_energy_std,float,Audio feature: bark_energy_std,feature value,-∞ to ∞
+delta_energy_mean,float,Audio feature: delta_energy_mean,feature value,-∞ to ∞
+delta_energy_std,float,Audio feature: delta_energy_std,feature value,-∞ to ∞
+delta2_energy_mean,float,Audio feature: delta2_energy_mean,feature value,-∞ to ∞
+delta2_energy_std,float,Audio feature: delta2_energy_std,feature value,-∞ to ∞
+spectral_centroid_mean,float,Audio feature: spectral_centroid_mean,feature value,-∞ to ∞
+spectral_centroid_std,float,Audio feature: spectral_centroid_std,feature value,-∞ to ∞
+spectral_bandwidth_mean,float,Audio feature: spectral_bandwidth_mean,feature value,-∞ to ∞
+spectral_bandwidth_std,float,Audio feature: spectral_bandwidth_std,feature value,-∞ to ∞
+spectral_rolloff_mean,float,Audio feature: spectral_rolloff_mean,feature value,-∞ to ∞
+spectral_rolloff_std,float,Audio feature: spectral_rolloff_std,feature value,-∞ to ∞
+zcr_mean,float,Audio feature: zcr_mean,feature value,-∞ to ∞
+zcr_std,float,Audio feature: zcr_std,feature value,-∞ to ∞
+chroma_mean,float,Audio feature: chroma_mean,feature value,-∞ to ∞
+chroma_std,float,Audio feature: chroma_std,feature value,-∞ to ∞
+pause_num_pauses,integer,Number of pauses detected,count,0-∞
+pause_total_pause_duration,float,Total pause duration,seconds,0.0-∞
+pause_avg_pause_duration,float,Average pause duration,seconds,0.0-∞
+pause_longest_pause_duration,float,Longest pause duration,seconds,0.0-∞
+pause_pause_frequency,float,Pause frequency (pauses per second),Hz,0.0-∞
+pause_speech_duration,float,Total speech duration,seconds,0.0-∞
+pause_speech_rate,float,Speech rate ratio,ratio,0.0-1.0
+pause_pause_ratio,float,Pause ratio,ratio,0.0-1.0
+pause_early_pauses,integer,Pauses in first third,count,0-∞
+pause_middle_pauses,integer,Pauses in middle third,count,0-∞
+pause_late_pauses,integer,Pauses in last third,count,0-∞
+pause_pause_std,float,Standard deviation of pause durations,seconds,0.0-∞
+pause_pause_variability,float,Pause variability coefficient,ratio,0.0-∞
+pause_hesitation_score,float,Hesitation score,score,0.0-1.0
+pause_has_long_pauses,boolean,Has pauses > 1.5s,N/A,True/False
+pause_has_frequent_pauses,boolean,Has frequent pauses (>1 per second),N/A,True/False
+pause_has_high_pause_ratio,boolean,Has high pause ratio (>30%),N/A,True/False

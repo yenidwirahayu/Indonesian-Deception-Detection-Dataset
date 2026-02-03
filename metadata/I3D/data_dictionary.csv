@@ -1,0 +1,1688 @@
+column,type,description,unit,range,missing_value_policy
+filename,string,Video filename (contains label prefix LIE_/TRUTH_),-,-,N/A
+text_indonesian_original,string,Original transcript in Indonesian,-,-,empty string if failed
+text_indonesian_normalized,string,Transcript with numbers converted to words,-,-,empty string if failed
+label,integer,Ground truth label,-,"0=truth, 1=lie",N/A
+dataset,string,Dataset identifier,-,I3D,N/A
+transcript_source,string,Source of transcript,-,manual/stt/stt_ultra/failed,failed
+transcript_from_cache,boolean,Whether transcript loaded from cache,-,true/false,false
+transcript_attempt,integer,STT attempt number that succeeded,-,0-7,0
+transcript_mode,string,Extraction mode,-,normal/ultra/manual,normal
+stt_energy_threshold,float,Energy threshold used in successful STT attempt,-,>=0,0
+char_count_id,integer,Character count (Indonesian),characters,>=0,0
+word_count_id,integer,Word count (Indonesian),words,>=0,0
+sentiment_id,float,"Sentiment polarity (PROXY ONLY - TextBlob is English-based, not computed for Indonesian)",-,-1.0 to 1.0,0
+subjectivity_id,float,"Subjectivity score (PROXY ONLY, not computed for Indonesian)",-,0.0 to 1.0,0
+complexity_id,float,Text complexity score,-,>=0,0
+lexical_diversity_id,float,Unique words / total words,-,0.0 to 1.0,0
+text_english,string,English translation via Google Translate,-,-,empty string if failed
+char_count_en,integer,Character count (English),characters,>=0,0
+word_count_en,integer,Word count (English),words,>=0,0
+sentiment_en,float,Sentiment polarity (English - TextBlob),-,-1.0 to 1.0,0
+subjectivity_en,float,Subjectivity score (English),-,0.0 to 1.0,0
+complexity_en,float,Text complexity score (English),-,>=0,0
+lexical_diversity_en,float,Unique words / total words (English),-,0.0 to 1.0,0
+has_numbers,boolean,Contains numeric expressions,-,true/false,false
+number_count,integer,Count of numeric expressions,count,>=0,0
+has_vague_quantifiers,boolean,"Contains vague quantifiers (sekitar, kira-kira, etc)",-,true/false,false
+has_exact_quantifiers,boolean,"Contains exact quantifiers (tepat, persis, etc)",-,true/false,false
+number_word_ratio,float,Ratio of number words to total words,-,0.0 to 1.0,0
+has_large_numbers,boolean,Contains numbers > 1000,-,true/false,false
+has_decimal_numbers,boolean,Contains decimal numbers,-,true/false,false
+mfcc1_mean,float,MFCC coefficient 1 mean,-,real,0
+mfcc1_std,float,MFCC coefficient 1 std deviation,-,>=0,0
+mfcc2_mean,float,MFCC coefficient 2 mean,-,real,0
+mfcc2_std,float,MFCC coefficient 2 std deviation,-,>=0,0
+mfcc3_mean,float,MFCC coefficient 3 mean,-,real,0
+mfcc3_std,float,MFCC coefficient 3 std deviation,-,>=0,0
+mfcc4_mean,float,MFCC coefficient 4 mean,-,real,0
+mfcc4_std,float,MFCC coefficient 4 std deviation,-,>=0,0
+mfcc5_mean,float,MFCC coefficient 5 mean,-,real,0
+mfcc5_std,float,MFCC coefficient 5 std deviation,-,>=0,0
+mfcc6_mean,float,MFCC coefficient 6 mean,-,real,0
+mfcc6_std,float,MFCC coefficient 6 std deviation,-,>=0,0
+mfcc7_mean,float,MFCC coefficient 7 mean,-,real,0
+mfcc7_std,float,MFCC coefficient 7 std deviation,-,>=0,0
+mfcc8_mean,float,MFCC coefficient 8 mean,-,real,0
+mfcc8_std,float,MFCC coefficient 8 std deviation,-,>=0,0
+mfcc9_mean,float,MFCC coefficient 9 mean,-,real,0
+mfcc9_std,float,MFCC coefficient 9 std deviation,-,>=0,0
+mfcc10_mean,float,MFCC coefficient 10 mean,-,real,0
+mfcc10_std,float,MFCC coefficient 10 std deviation,-,>=0,0
+mfcc11_mean,float,MFCC coefficient 11 mean,-,real,0
+mfcc11_std,float,MFCC coefficient 11 std deviation,-,>=0,0
+mfcc12_mean,float,MFCC coefficient 12 mean,-,real,0
+mfcc12_std,float,MFCC coefficient 12 std deviation,-,>=0,0
+mfcc13_mean,float,MFCC coefficient 13 mean,-,real,0
+mfcc13_std,float,MFCC coefficient 13 std deviation,-,>=0,0
+delta_mfcc1_mean,float,Delta MFCC coefficient 1 mean,-,real,0
+delta_mfcc1_std,float,Delta MFCC coefficient 1 std deviation,-,>=0,0
+delta_mfcc2_mean,float,Delta MFCC coefficient 2 mean,-,real,0
+delta_mfcc2_std,float,Delta MFCC coefficient 2 std deviation,-,>=0,0
+delta_mfcc3_mean,float,Delta MFCC coefficient 3 mean,-,real,0
+delta_mfcc3_std,float,Delta MFCC coefficient 3 std deviation,-,>=0,0
+delta_mfcc4_mean,float,Delta MFCC coefficient 4 mean,-,real,0
+delta_mfcc4_std,float,Delta MFCC coefficient 4 std deviation,-,>=0,0
+delta_mfcc5_mean,float,Delta MFCC coefficient 5 mean,-,real,0
+delta_mfcc5_std,float,Delta MFCC coefficient 5 std deviation,-,>=0,0
+delta_mfcc6_mean,float,Delta MFCC coefficient 6 mean,-,real,0
+delta_mfcc6_std,float,Delta MFCC coefficient 6 std deviation,-,>=0,0
+delta_mfcc7_mean,float,Delta MFCC coefficient 7 mean,-,real,0
+delta_mfcc7_std,float,Delta MFCC coefficient 7 std deviation,-,>=0,0
+delta_mfcc8_mean,float,Delta MFCC coefficient 8 mean,-,real,0
+delta_mfcc8_std,float,Delta MFCC coefficient 8 std deviation,-,>=0,0
+delta_mfcc9_mean,float,Delta MFCC coefficient 9 mean,-,real,0
+delta_mfcc9_std,float,Delta MFCC coefficient 9 std deviation,-,>=0,0
+delta_mfcc10_mean,float,Delta MFCC coefficient 10 mean,-,real,0
+delta_mfcc10_std,float,Delta MFCC coefficient 10 std deviation,-,>=0,0
+delta_mfcc11_mean,float,Delta MFCC coefficient 11 mean,-,real,0
+delta_mfcc11_std,float,Delta MFCC coefficient 11 std deviation,-,>=0,0
+delta_mfcc12_mean,float,Delta MFCC coefficient 12 mean,-,real,0
+delta_mfcc12_std,float,Delta MFCC coefficient 12 std deviation,-,>=0,0
+delta_mfcc13_mean,float,Delta MFCC coefficient 13 mean,-,real,0
+delta_mfcc13_std,float,Delta MFCC coefficient 13 std deviation,-,>=0,0
+delta2_mfcc1_mean,float,Delta-delta MFCC coefficient 1 mean,-,real,0
+delta2_mfcc1_std,float,Delta-delta MFCC coefficient 1 std deviation,-,>=0,0
+delta2_mfcc2_mean,float,Delta-delta MFCC coefficient 2 mean,-,real,0
+delta2_mfcc2_std,float,Delta-delta MFCC coefficient 2 std deviation,-,>=0,0
+delta2_mfcc3_mean,float,Delta-delta MFCC coefficient 3 mean,-,real,0
+delta2_mfcc3_std,float,Delta-delta MFCC coefficient 3 std deviation,-,>=0,0
+delta2_mfcc4_mean,float,Delta-delta MFCC coefficient 4 mean,-,real,0
+delta2_mfcc4_std,float,Delta-delta MFCC coefficient 4 std deviation,-,>=0,0
+delta2_mfcc5_mean,float,Delta-delta MFCC coefficient 5 mean,-,real,0
+delta2_mfcc5_std,float,Delta-delta MFCC coefficient 5 std deviation,-,>=0,0
+delta2_mfcc6_mean,float,Delta-delta MFCC coefficient 6 mean,-,real,0
+delta2_mfcc6_std,float,Delta-delta MFCC coefficient 6 std deviation,-,>=0,0
+delta2_mfcc7_mean,float,Delta-delta MFCC coefficient 7 mean,-,real,0
+delta2_mfcc7_std,float,Delta-delta MFCC coefficient 7 std deviation,-,>=0,0
+delta2_mfcc8_mean,float,Delta-delta MFCC coefficient 8 mean,-,real,0
+delta2_mfcc8_std,float,Delta-delta MFCC coefficient 8 std deviation,-,>=0,0
+delta2_mfcc9_mean,float,Delta-delta MFCC coefficient 9 mean,-,real,0
+delta2_mfcc9_std,float,Delta-delta MFCC coefficient 9 std deviation,-,>=0,0
+delta2_mfcc10_mean,float,Delta-delta MFCC coefficient 10 mean,-,real,0
+delta2_mfcc10_std,float,Delta-delta MFCC coefficient 10 std deviation,-,>=0,0
+delta2_mfcc11_mean,float,Delta-delta MFCC coefficient 11 mean,-,real,0
+delta2_mfcc11_std,float,Delta-delta MFCC coefficient 11 std deviation,-,>=0,0
+delta2_mfcc12_mean,float,Delta-delta MFCC coefficient 12 mean,-,real,0
+delta2_mfcc12_std,float,Delta-delta MFCC coefficient 12 std deviation,-,>=0,0
+delta2_mfcc13_mean,float,Delta-delta MFCC coefficient 13 mean,-,real,0
+delta2_mfcc13_std,float,Delta-delta MFCC coefficient 13 std deviation,-,>=0,0
+bark_energy_mean,float,"Bark energy mean. Computed as sum of 24 mel-band energies per time frame (axis=0 summation across mel bins), then averaged across all time frames. Represents total spectral energy per time point. See Methods section for mel spectrogram parameters (n_mels=24, n_fft=2048, hop_length=512).",-,>=0,0
+bark_energy_std,float,Bark energy std deviation (temporal variation across time frames),-,>=0,0
+delta_energy_mean,float,Delta energy mean (first-order temporal derivative of mel spectrogram energy),-,real,0
+delta_energy_std,float,Delta energy std deviation,-,>=0,0
+delta2_energy_mean,float,Delta-delta energy mean (second-order temporal derivative),-,real,0
+delta2_energy_std,float,Delta-delta energy std deviation,-,>=0,0
+spectral_centroid_mean,float,Spectral centroid mean,Hz,>=0,0
+spectral_centroid_std,float,Spectral centroid std deviation,Hz,>=0,0
+spectral_bandwidth_mean,float,Spectral bandwidth mean,Hz,>=0,0
+spectral_bandwidth_std,float,Spectral bandwidth std deviation,Hz,>=0,0
+spectral_rolloff_mean,float,Spectral rolloff mean,Hz,>=0,0
+spectral_rolloff_std,float,Spectral rolloff std deviation,Hz,>=0,0
+zcr_mean,float,Zero-crossing rate mean,-,0.0 to 1.0,0
+zcr_std,float,Zero-crossing rate std deviation,-,>=0,0
+chroma_mean,float,Chroma feature mean,-,>=0,0
+chroma_std,float,Chroma feature std deviation,-,>=0,0
+audio_quality_score,float,Overall audio quality score,-,0.0 to 1.0,0
+audio_duration,float,Audio duration,seconds,>=0,0
+audio_snr,float,"Signal-to-noise ratio (STFT-based, see Methods)",dB,real,0
+audio_snr_computation,string,SNR computation method with parameters,-,-,failed
+audio_rms,float,Root mean square amplitude,-,>=0,0
+audio_spectral_centroid,float,Mean spectral centroid,Hz,>=0,0
+audio_dynamic_range,float,Dynamic range,-,>=0,0
+pause_num_pauses,integer,Number of pauses detected,count,>=0,0
+pause_total_pause_duration,float,Total pause duration,seconds,>=0,0
+pause_avg_pause_duration,float,Average pause duration,seconds,>=0,0
+pause_longest_pause_duration,float,Longest pause duration,seconds,>=0,0
+pause_pause_frequency,float,Pauses per second,Hz,>=0,0
+pause_speech_duration,float,Speech duration (excluding pauses),seconds,>=0,0
+pause_speech_rate,float,Speech rate (speech / total duration),-,0.0 to 1.0,0
+pause_pause_ratio,float,Pause ratio (pause / total duration),-,0.0 to 1.0,0
+pause_early_pauses,integer,Pauses in first third,count,>=0,0
+pause_middle_pauses,integer,Pauses in middle third,count,>=0,0
+pause_late_pauses,integer,Pauses in last third,count,>=0,0
+pause_pause_std,float,Pause duration std deviation,seconds,>=0,0
+pause_pause_variability,float,Pause variability (std / mean),-,>=0,0
+pause_hesitation_score,float,Composite hesitation score,-,0.0 to 1.0,0
+pause_has_long_pauses,boolean,Has pauses > 1.5s,-,true/false,false
+pause_has_frequent_pauses,boolean,Pause frequency > 1.0 Hz,-,true/false,false
+pause_has_high_pause_ratio,boolean,Pause ratio > 0.3,-,true/false,false
+Video_Name,string,Video identifier (without extension),-,-,N/A
+Frame,integer,Frame number,frame,>=0,N/A
+Landmark_0_X,float,Face/Iris landmark 0 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_0_Y,float,Face/Iris landmark 0 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_0_Z,float,"Face/Iris landmark 0 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_1_X,float,Face/Iris landmark 1 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_1_Y,float,Face/Iris landmark 1 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_1_Z,float,"Face/Iris landmark 1 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_2_X,float,Face/Iris landmark 2 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_2_Y,float,Face/Iris landmark 2 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_2_Z,float,"Face/Iris landmark 2 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_3_X,float,Face/Iris landmark 3 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_3_Y,float,Face/Iris landmark 3 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_3_Z,float,"Face/Iris landmark 3 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_4_X,float,Face/Iris landmark 4 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_4_Y,float,Face/Iris landmark 4 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_4_Z,float,"Face/Iris landmark 4 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_5_X,float,Face/Iris landmark 5 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_5_Y,float,Face/Iris landmark 5 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_5_Z,float,"Face/Iris landmark 5 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_6_X,float,Face/Iris landmark 6 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_6_Y,float,Face/Iris landmark 6 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_6_Z,float,"Face/Iris landmark 6 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_7_X,float,Face/Iris landmark 7 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_7_Y,float,Face/Iris landmark 7 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_7_Z,float,"Face/Iris landmark 7 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_8_X,float,Face/Iris landmark 8 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_8_Y,float,Face/Iris landmark 8 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_8_Z,float,"Face/Iris landmark 8 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_9_X,float,Face/Iris landmark 9 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_9_Y,float,Face/Iris landmark 9 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_9_Z,float,"Face/Iris landmark 9 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_10_X,float,Face/Iris landmark 10 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_10_Y,float,Face/Iris landmark 10 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_10_Z,float,"Face/Iris landmark 10 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_11_X,float,Face/Iris landmark 11 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_11_Y,float,Face/Iris landmark 11 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_11_Z,float,"Face/Iris landmark 11 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_12_X,float,Face/Iris landmark 12 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_12_Y,float,Face/Iris landmark 12 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_12_Z,float,"Face/Iris landmark 12 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_13_X,float,Face/Iris landmark 13 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_13_Y,float,Face/Iris landmark 13 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_13_Z,float,"Face/Iris landmark 13 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_14_X,float,Face/Iris landmark 14 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_14_Y,float,Face/Iris landmark 14 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_14_Z,float,"Face/Iris landmark 14 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_15_X,float,Face/Iris landmark 15 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_15_Y,float,Face/Iris landmark 15 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_15_Z,float,"Face/Iris landmark 15 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_16_X,float,Face/Iris landmark 16 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_16_Y,float,Face/Iris landmark 16 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_16_Z,float,"Face/Iris landmark 16 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_17_X,float,Face/Iris landmark 17 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_17_Y,float,Face/Iris landmark 17 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_17_Z,float,"Face/Iris landmark 17 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_18_X,float,Face/Iris landmark 18 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_18_Y,float,Face/Iris landmark 18 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_18_Z,float,"Face/Iris landmark 18 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_19_X,float,Face/Iris landmark 19 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_19_Y,float,Face/Iris landmark 19 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_19_Z,float,"Face/Iris landmark 19 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_20_X,float,Face/Iris landmark 20 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_20_Y,float,Face/Iris landmark 20 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_20_Z,float,"Face/Iris landmark 20 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_21_X,float,Face/Iris landmark 21 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_21_Y,float,Face/Iris landmark 21 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_21_Z,float,"Face/Iris landmark 21 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_22_X,float,Face/Iris landmark 22 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_22_Y,float,Face/Iris landmark 22 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_22_Z,float,"Face/Iris landmark 22 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_23_X,float,Face/Iris landmark 23 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_23_Y,float,Face/Iris landmark 23 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_23_Z,float,"Face/Iris landmark 23 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_24_X,float,Face/Iris landmark 24 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_24_Y,float,Face/Iris landmark 24 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_24_Z,float,"Face/Iris landmark 24 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_25_X,float,Face/Iris landmark 25 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_25_Y,float,Face/Iris landmark 25 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_25_Z,float,"Face/Iris landmark 25 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_26_X,float,Face/Iris landmark 26 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_26_Y,float,Face/Iris landmark 26 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_26_Z,float,"Face/Iris landmark 26 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_27_X,float,Face/Iris landmark 27 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_27_Y,float,Face/Iris landmark 27 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_27_Z,float,"Face/Iris landmark 27 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_28_X,float,Face/Iris landmark 28 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_28_Y,float,Face/Iris landmark 28 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_28_Z,float,"Face/Iris landmark 28 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_29_X,float,Face/Iris landmark 29 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_29_Y,float,Face/Iris landmark 29 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_29_Z,float,"Face/Iris landmark 29 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_30_X,float,Face/Iris landmark 30 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_30_Y,float,Face/Iris landmark 30 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_30_Z,float,"Face/Iris landmark 30 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_31_X,float,Face/Iris landmark 31 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_31_Y,float,Face/Iris landmark 31 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_31_Z,float,"Face/Iris landmark 31 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_32_X,float,Face/Iris landmark 32 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_32_Y,float,Face/Iris landmark 32 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_32_Z,float,"Face/Iris landmark 32 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_33_X,float,Face/Iris landmark 33 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_33_Y,float,Face/Iris landmark 33 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_33_Z,float,"Face/Iris landmark 33 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_34_X,float,Face/Iris landmark 34 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_34_Y,float,Face/Iris landmark 34 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_34_Z,float,"Face/Iris landmark 34 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_35_X,float,Face/Iris landmark 35 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_35_Y,float,Face/Iris landmark 35 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_35_Z,float,"Face/Iris landmark 35 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_36_X,float,Face/Iris landmark 36 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_36_Y,float,Face/Iris landmark 36 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_36_Z,float,"Face/Iris landmark 36 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_37_X,float,Face/Iris landmark 37 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_37_Y,float,Face/Iris landmark 37 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_37_Z,float,"Face/Iris landmark 37 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_38_X,float,Face/Iris landmark 38 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_38_Y,float,Face/Iris landmark 38 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_38_Z,float,"Face/Iris landmark 38 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_39_X,float,Face/Iris landmark 39 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_39_Y,float,Face/Iris landmark 39 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_39_Z,float,"Face/Iris landmark 39 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_40_X,float,Face/Iris landmark 40 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_40_Y,float,Face/Iris landmark 40 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_40_Z,float,"Face/Iris landmark 40 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_41_X,float,Face/Iris landmark 41 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_41_Y,float,Face/Iris landmark 41 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_41_Z,float,"Face/Iris landmark 41 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_42_X,float,Face/Iris landmark 42 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_42_Y,float,Face/Iris landmark 42 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_42_Z,float,"Face/Iris landmark 42 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_43_X,float,Face/Iris landmark 43 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_43_Y,float,Face/Iris landmark 43 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_43_Z,float,"Face/Iris landmark 43 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_44_X,float,Face/Iris landmark 44 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_44_Y,float,Face/Iris landmark 44 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_44_Z,float,"Face/Iris landmark 44 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_45_X,float,Face/Iris landmark 45 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_45_Y,float,Face/Iris landmark 45 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_45_Z,float,"Face/Iris landmark 45 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_46_X,float,Face/Iris landmark 46 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_46_Y,float,Face/Iris landmark 46 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_46_Z,float,"Face/Iris landmark 46 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_47_X,float,Face/Iris landmark 47 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_47_Y,float,Face/Iris landmark 47 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_47_Z,float,"Face/Iris landmark 47 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_48_X,float,Face/Iris landmark 48 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_48_Y,float,Face/Iris landmark 48 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_48_Z,float,"Face/Iris landmark 48 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_49_X,float,Face/Iris landmark 49 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_49_Y,float,Face/Iris landmark 49 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_49_Z,float,"Face/Iris landmark 49 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_50_X,float,Face/Iris landmark 50 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_50_Y,float,Face/Iris landmark 50 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_50_Z,float,"Face/Iris landmark 50 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_51_X,float,Face/Iris landmark 51 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_51_Y,float,Face/Iris landmark 51 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_51_Z,float,"Face/Iris landmark 51 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_52_X,float,Face/Iris landmark 52 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_52_Y,float,Face/Iris landmark 52 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_52_Z,float,"Face/Iris landmark 52 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_53_X,float,Face/Iris landmark 53 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_53_Y,float,Face/Iris landmark 53 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_53_Z,float,"Face/Iris landmark 53 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_54_X,float,Face/Iris landmark 54 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_54_Y,float,Face/Iris landmark 54 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_54_Z,float,"Face/Iris landmark 54 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_55_X,float,Face/Iris landmark 55 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_55_Y,float,Face/Iris landmark 55 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_55_Z,float,"Face/Iris landmark 55 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_56_X,float,Face/Iris landmark 56 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_56_Y,float,Face/Iris landmark 56 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_56_Z,float,"Face/Iris landmark 56 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_57_X,float,Face/Iris landmark 57 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_57_Y,float,Face/Iris landmark 57 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_57_Z,float,"Face/Iris landmark 57 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_58_X,float,Face/Iris landmark 58 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_58_Y,float,Face/Iris landmark 58 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_58_Z,float,"Face/Iris landmark 58 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_59_X,float,Face/Iris landmark 59 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_59_Y,float,Face/Iris landmark 59 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_59_Z,float,"Face/Iris landmark 59 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_60_X,float,Face/Iris landmark 60 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_60_Y,float,Face/Iris landmark 60 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_60_Z,float,"Face/Iris landmark 60 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_61_X,float,Face/Iris landmark 61 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_61_Y,float,Face/Iris landmark 61 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_61_Z,float,"Face/Iris landmark 61 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_62_X,float,Face/Iris landmark 62 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_62_Y,float,Face/Iris landmark 62 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_62_Z,float,"Face/Iris landmark 62 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_63_X,float,Face/Iris landmark 63 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_63_Y,float,Face/Iris landmark 63 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_63_Z,float,"Face/Iris landmark 63 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_64_X,float,Face/Iris landmark 64 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_64_Y,float,Face/Iris landmark 64 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_64_Z,float,"Face/Iris landmark 64 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_65_X,float,Face/Iris landmark 65 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_65_Y,float,Face/Iris landmark 65 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_65_Z,float,"Face/Iris landmark 65 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_66_X,float,Face/Iris landmark 66 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_66_Y,float,Face/Iris landmark 66 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_66_Z,float,"Face/Iris landmark 66 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_67_X,float,Face/Iris landmark 67 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_67_Y,float,Face/Iris landmark 67 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_67_Z,float,"Face/Iris landmark 67 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_68_X,float,Face/Iris landmark 68 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_68_Y,float,Face/Iris landmark 68 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_68_Z,float,"Face/Iris landmark 68 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_69_X,float,Face/Iris landmark 69 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_69_Y,float,Face/Iris landmark 69 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_69_Z,float,"Face/Iris landmark 69 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_70_X,float,Face/Iris landmark 70 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_70_Y,float,Face/Iris landmark 70 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_70_Z,float,"Face/Iris landmark 70 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_71_X,float,Face/Iris landmark 71 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_71_Y,float,Face/Iris landmark 71 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_71_Z,float,"Face/Iris landmark 71 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_72_X,float,Face/Iris landmark 72 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_72_Y,float,Face/Iris landmark 72 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_72_Z,float,"Face/Iris landmark 72 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_73_X,float,Face/Iris landmark 73 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_73_Y,float,Face/Iris landmark 73 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_73_Z,float,"Face/Iris landmark 73 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_74_X,float,Face/Iris landmark 74 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_74_Y,float,Face/Iris landmark 74 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_74_Z,float,"Face/Iris landmark 74 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_75_X,float,Face/Iris landmark 75 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_75_Y,float,Face/Iris landmark 75 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_75_Z,float,"Face/Iris landmark 75 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_76_X,float,Face/Iris landmark 76 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_76_Y,float,Face/Iris landmark 76 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_76_Z,float,"Face/Iris landmark 76 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_77_X,float,Face/Iris landmark 77 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_77_Y,float,Face/Iris landmark 77 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_77_Z,float,"Face/Iris landmark 77 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_78_X,float,Face/Iris landmark 78 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_78_Y,float,Face/Iris landmark 78 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_78_Z,float,"Face/Iris landmark 78 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_79_X,float,Face/Iris landmark 79 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_79_Y,float,Face/Iris landmark 79 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_79_Z,float,"Face/Iris landmark 79 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_80_X,float,Face/Iris landmark 80 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_80_Y,float,Face/Iris landmark 80 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_80_Z,float,"Face/Iris landmark 80 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_81_X,float,Face/Iris landmark 81 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_81_Y,float,Face/Iris landmark 81 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_81_Z,float,"Face/Iris landmark 81 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_82_X,float,Face/Iris landmark 82 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_82_Y,float,Face/Iris landmark 82 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_82_Z,float,"Face/Iris landmark 82 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_83_X,float,Face/Iris landmark 83 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_83_Y,float,Face/Iris landmark 83 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_83_Z,float,"Face/Iris landmark 83 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_84_X,float,Face/Iris landmark 84 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_84_Y,float,Face/Iris landmark 84 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_84_Z,float,"Face/Iris landmark 84 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_85_X,float,Face/Iris landmark 85 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_85_Y,float,Face/Iris landmark 85 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_85_Z,float,"Face/Iris landmark 85 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_86_X,float,Face/Iris landmark 86 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_86_Y,float,Face/Iris landmark 86 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_86_Z,float,"Face/Iris landmark 86 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_87_X,float,Face/Iris landmark 87 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_87_Y,float,Face/Iris landmark 87 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_87_Z,float,"Face/Iris landmark 87 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_88_X,float,Face/Iris landmark 88 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_88_Y,float,Face/Iris landmark 88 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_88_Z,float,"Face/Iris landmark 88 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_89_X,float,Face/Iris landmark 89 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_89_Y,float,Face/Iris landmark 89 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_89_Z,float,"Face/Iris landmark 89 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_90_X,float,Face/Iris landmark 90 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_90_Y,float,Face/Iris landmark 90 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_90_Z,float,"Face/Iris landmark 90 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_91_X,float,Face/Iris landmark 91 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_91_Y,float,Face/Iris landmark 91 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_91_Z,float,"Face/Iris landmark 91 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_92_X,float,Face/Iris landmark 92 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_92_Y,float,Face/Iris landmark 92 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_92_Z,float,"Face/Iris landmark 92 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_93_X,float,Face/Iris landmark 93 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_93_Y,float,Face/Iris landmark 93 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_93_Z,float,"Face/Iris landmark 93 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_94_X,float,Face/Iris landmark 94 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_94_Y,float,Face/Iris landmark 94 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_94_Z,float,"Face/Iris landmark 94 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_95_X,float,Face/Iris landmark 95 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_95_Y,float,Face/Iris landmark 95 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_95_Z,float,"Face/Iris landmark 95 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_96_X,float,Face/Iris landmark 96 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_96_Y,float,Face/Iris landmark 96 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_96_Z,float,"Face/Iris landmark 96 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_97_X,float,Face/Iris landmark 97 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_97_Y,float,Face/Iris landmark 97 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_97_Z,float,"Face/Iris landmark 97 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_98_X,float,Face/Iris landmark 98 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_98_Y,float,Face/Iris landmark 98 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_98_Z,float,"Face/Iris landmark 98 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_99_X,float,Face/Iris landmark 99 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_99_Y,float,Face/Iris landmark 99 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_99_Z,float,"Face/Iris landmark 99 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_100_X,float,Face/Iris landmark 100 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_100_Y,float,Face/Iris landmark 100 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_100_Z,float,"Face/Iris landmark 100 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_101_X,float,Face/Iris landmark 101 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_101_Y,float,Face/Iris landmark 101 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_101_Z,float,"Face/Iris landmark 101 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_102_X,float,Face/Iris landmark 102 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_102_Y,float,Face/Iris landmark 102 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_102_Z,float,"Face/Iris landmark 102 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_103_X,float,Face/Iris landmark 103 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_103_Y,float,Face/Iris landmark 103 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_103_Z,float,"Face/Iris landmark 103 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_104_X,float,Face/Iris landmark 104 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_104_Y,float,Face/Iris landmark 104 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_104_Z,float,"Face/Iris landmark 104 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_105_X,float,Face/Iris landmark 105 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_105_Y,float,Face/Iris landmark 105 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_105_Z,float,"Face/Iris landmark 105 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_106_X,float,Face/Iris landmark 106 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_106_Y,float,Face/Iris landmark 106 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_106_Z,float,"Face/Iris landmark 106 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_107_X,float,Face/Iris landmark 107 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_107_Y,float,Face/Iris landmark 107 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_107_Z,float,"Face/Iris landmark 107 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_108_X,float,Face/Iris landmark 108 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_108_Y,float,Face/Iris landmark 108 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_108_Z,float,"Face/Iris landmark 108 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_109_X,float,Face/Iris landmark 109 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_109_Y,float,Face/Iris landmark 109 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_109_Z,float,"Face/Iris landmark 109 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_110_X,float,Face/Iris landmark 110 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_110_Y,float,Face/Iris landmark 110 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_110_Z,float,"Face/Iris landmark 110 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_111_X,float,Face/Iris landmark 111 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_111_Y,float,Face/Iris landmark 111 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_111_Z,float,"Face/Iris landmark 111 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_112_X,float,Face/Iris landmark 112 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_112_Y,float,Face/Iris landmark 112 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_112_Z,float,"Face/Iris landmark 112 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_113_X,float,Face/Iris landmark 113 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_113_Y,float,Face/Iris landmark 113 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_113_Z,float,"Face/Iris landmark 113 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_114_X,float,Face/Iris landmark 114 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_114_Y,float,Face/Iris landmark 114 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_114_Z,float,"Face/Iris landmark 114 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_115_X,float,Face/Iris landmark 115 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_115_Y,float,Face/Iris landmark 115 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_115_Z,float,"Face/Iris landmark 115 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_116_X,float,Face/Iris landmark 116 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_116_Y,float,Face/Iris landmark 116 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_116_Z,float,"Face/Iris landmark 116 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_117_X,float,Face/Iris landmark 117 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_117_Y,float,Face/Iris landmark 117 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_117_Z,float,"Face/Iris landmark 117 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_118_X,float,Face/Iris landmark 118 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_118_Y,float,Face/Iris landmark 118 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_118_Z,float,"Face/Iris landmark 118 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_119_X,float,Face/Iris landmark 119 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_119_Y,float,Face/Iris landmark 119 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_119_Z,float,"Face/Iris landmark 119 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_120_X,float,Face/Iris landmark 120 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_120_Y,float,Face/Iris landmark 120 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_120_Z,float,"Face/Iris landmark 120 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_121_X,float,Face/Iris landmark 121 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_121_Y,float,Face/Iris landmark 121 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_121_Z,float,"Face/Iris landmark 121 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_122_X,float,Face/Iris landmark 122 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_122_Y,float,Face/Iris landmark 122 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_122_Z,float,"Face/Iris landmark 122 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_123_X,float,Face/Iris landmark 123 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_123_Y,float,Face/Iris landmark 123 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_123_Z,float,"Face/Iris landmark 123 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_124_X,float,Face/Iris landmark 124 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_124_Y,float,Face/Iris landmark 124 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_124_Z,float,"Face/Iris landmark 124 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_125_X,float,Face/Iris landmark 125 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_125_Y,float,Face/Iris landmark 125 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_125_Z,float,"Face/Iris landmark 125 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_126_X,float,Face/Iris landmark 126 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_126_Y,float,Face/Iris landmark 126 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_126_Z,float,"Face/Iris landmark 126 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_127_X,float,Face/Iris landmark 127 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_127_Y,float,Face/Iris landmark 127 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_127_Z,float,"Face/Iris landmark 127 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_128_X,float,Face/Iris landmark 128 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_128_Y,float,Face/Iris landmark 128 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_128_Z,float,"Face/Iris landmark 128 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_129_X,float,Face/Iris landmark 129 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_129_Y,float,Face/Iris landmark 129 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_129_Z,float,"Face/Iris landmark 129 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_130_X,float,Face/Iris landmark 130 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_130_Y,float,Face/Iris landmark 130 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_130_Z,float,"Face/Iris landmark 130 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_131_X,float,Face/Iris landmark 131 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_131_Y,float,Face/Iris landmark 131 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_131_Z,float,"Face/Iris landmark 131 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_132_X,float,Face/Iris landmark 132 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_132_Y,float,Face/Iris landmark 132 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_132_Z,float,"Face/Iris landmark 132 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_133_X,float,Face/Iris landmark 133 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_133_Y,float,Face/Iris landmark 133 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_133_Z,float,"Face/Iris landmark 133 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_134_X,float,Face/Iris landmark 134 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_134_Y,float,Face/Iris landmark 134 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_134_Z,float,"Face/Iris landmark 134 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_135_X,float,Face/Iris landmark 135 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_135_Y,float,Face/Iris landmark 135 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_135_Z,float,"Face/Iris landmark 135 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_136_X,float,Face/Iris landmark 136 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_136_Y,float,Face/Iris landmark 136 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_136_Z,float,"Face/Iris landmark 136 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_137_X,float,Face/Iris landmark 137 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_137_Y,float,Face/Iris landmark 137 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_137_Z,float,"Face/Iris landmark 137 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_138_X,float,Face/Iris landmark 138 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_138_Y,float,Face/Iris landmark 138 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_138_Z,float,"Face/Iris landmark 138 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_139_X,float,Face/Iris landmark 139 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_139_Y,float,Face/Iris landmark 139 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_139_Z,float,"Face/Iris landmark 139 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_140_X,float,Face/Iris landmark 140 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_140_Y,float,Face/Iris landmark 140 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_140_Z,float,"Face/Iris landmark 140 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_141_X,float,Face/Iris landmark 141 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_141_Y,float,Face/Iris landmark 141 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_141_Z,float,"Face/Iris landmark 141 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_142_X,float,Face/Iris landmark 142 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_142_Y,float,Face/Iris landmark 142 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_142_Z,float,"Face/Iris landmark 142 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_143_X,float,Face/Iris landmark 143 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_143_Y,float,Face/Iris landmark 143 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_143_Z,float,"Face/Iris landmark 143 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_144_X,float,Face/Iris landmark 144 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_144_Y,float,Face/Iris landmark 144 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_144_Z,float,"Face/Iris landmark 144 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_145_X,float,Face/Iris landmark 145 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_145_Y,float,Face/Iris landmark 145 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_145_Z,float,"Face/Iris landmark 145 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_146_X,float,Face/Iris landmark 146 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_146_Y,float,Face/Iris landmark 146 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_146_Z,float,"Face/Iris landmark 146 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_147_X,float,Face/Iris landmark 147 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_147_Y,float,Face/Iris landmark 147 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_147_Z,float,"Face/Iris landmark 147 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_148_X,float,Face/Iris landmark 148 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_148_Y,float,Face/Iris landmark 148 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_148_Z,float,"Face/Iris landmark 148 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_149_X,float,Face/Iris landmark 149 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_149_Y,float,Face/Iris landmark 149 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_149_Z,float,"Face/Iris landmark 149 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_150_X,float,Face/Iris landmark 150 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_150_Y,float,Face/Iris landmark 150 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_150_Z,float,"Face/Iris landmark 150 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_151_X,float,Face/Iris landmark 151 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_151_Y,float,Face/Iris landmark 151 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_151_Z,float,"Face/Iris landmark 151 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_152_X,float,Face/Iris landmark 152 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_152_Y,float,Face/Iris landmark 152 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_152_Z,float,"Face/Iris landmark 152 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_153_X,float,Face/Iris landmark 153 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_153_Y,float,Face/Iris landmark 153 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_153_Z,float,"Face/Iris landmark 153 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_154_X,float,Face/Iris landmark 154 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_154_Y,float,Face/Iris landmark 154 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_154_Z,float,"Face/Iris landmark 154 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_155_X,float,Face/Iris landmark 155 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_155_Y,float,Face/Iris landmark 155 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_155_Z,float,"Face/Iris landmark 155 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_156_X,float,Face/Iris landmark 156 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_156_Y,float,Face/Iris landmark 156 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_156_Z,float,"Face/Iris landmark 156 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_157_X,float,Face/Iris landmark 157 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_157_Y,float,Face/Iris landmark 157 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_157_Z,float,"Face/Iris landmark 157 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_158_X,float,Face/Iris landmark 158 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_158_Y,float,Face/Iris landmark 158 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_158_Z,float,"Face/Iris landmark 158 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_159_X,float,Face/Iris landmark 159 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_159_Y,float,Face/Iris landmark 159 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_159_Z,float,"Face/Iris landmark 159 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_160_X,float,Face/Iris landmark 160 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_160_Y,float,Face/Iris landmark 160 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_160_Z,float,"Face/Iris landmark 160 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_161_X,float,Face/Iris landmark 161 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_161_Y,float,Face/Iris landmark 161 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_161_Z,float,"Face/Iris landmark 161 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_162_X,float,Face/Iris landmark 162 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_162_Y,float,Face/Iris landmark 162 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_162_Z,float,"Face/Iris landmark 162 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_163_X,float,Face/Iris landmark 163 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_163_Y,float,Face/Iris landmark 163 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_163_Z,float,"Face/Iris landmark 163 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_164_X,float,Face/Iris landmark 164 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_164_Y,float,Face/Iris landmark 164 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_164_Z,float,"Face/Iris landmark 164 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_165_X,float,Face/Iris landmark 165 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_165_Y,float,Face/Iris landmark 165 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_165_Z,float,"Face/Iris landmark 165 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_166_X,float,Face/Iris landmark 166 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_166_Y,float,Face/Iris landmark 166 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_166_Z,float,"Face/Iris landmark 166 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_167_X,float,Face/Iris landmark 167 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_167_Y,float,Face/Iris landmark 167 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_167_Z,float,"Face/Iris landmark 167 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_168_X,float,Face/Iris landmark 168 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_168_Y,float,Face/Iris landmark 168 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_168_Z,float,"Face/Iris landmark 168 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_169_X,float,Face/Iris landmark 169 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_169_Y,float,Face/Iris landmark 169 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_169_Z,float,"Face/Iris landmark 169 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_170_X,float,Face/Iris landmark 170 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_170_Y,float,Face/Iris landmark 170 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_170_Z,float,"Face/Iris landmark 170 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_171_X,float,Face/Iris landmark 171 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_171_Y,float,Face/Iris landmark 171 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_171_Z,float,"Face/Iris landmark 171 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_172_X,float,Face/Iris landmark 172 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_172_Y,float,Face/Iris landmark 172 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_172_Z,float,"Face/Iris landmark 172 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_173_X,float,Face/Iris landmark 173 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_173_Y,float,Face/Iris landmark 173 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_173_Z,float,"Face/Iris landmark 173 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_174_X,float,Face/Iris landmark 174 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_174_Y,float,Face/Iris landmark 174 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_174_Z,float,"Face/Iris landmark 174 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_175_X,float,Face/Iris landmark 175 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_175_Y,float,Face/Iris landmark 175 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_175_Z,float,"Face/Iris landmark 175 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_176_X,float,Face/Iris landmark 176 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_176_Y,float,Face/Iris landmark 176 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_176_Z,float,"Face/Iris landmark 176 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_177_X,float,Face/Iris landmark 177 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_177_Y,float,Face/Iris landmark 177 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_177_Z,float,"Face/Iris landmark 177 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_178_X,float,Face/Iris landmark 178 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_178_Y,float,Face/Iris landmark 178 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_178_Z,float,"Face/Iris landmark 178 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_179_X,float,Face/Iris landmark 179 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_179_Y,float,Face/Iris landmark 179 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_179_Z,float,"Face/Iris landmark 179 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_180_X,float,Face/Iris landmark 180 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_180_Y,float,Face/Iris landmark 180 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_180_Z,float,"Face/Iris landmark 180 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_181_X,float,Face/Iris landmark 181 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_181_Y,float,Face/Iris landmark 181 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_181_Z,float,"Face/Iris landmark 181 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_182_X,float,Face/Iris landmark 182 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_182_Y,float,Face/Iris landmark 182 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_182_Z,float,"Face/Iris landmark 182 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_183_X,float,Face/Iris landmark 183 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_183_Y,float,Face/Iris landmark 183 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_183_Z,float,"Face/Iris landmark 183 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_184_X,float,Face/Iris landmark 184 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_184_Y,float,Face/Iris landmark 184 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_184_Z,float,"Face/Iris landmark 184 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_185_X,float,Face/Iris landmark 185 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_185_Y,float,Face/Iris landmark 185 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_185_Z,float,"Face/Iris landmark 185 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_186_X,float,Face/Iris landmark 186 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_186_Y,float,Face/Iris landmark 186 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_186_Z,float,"Face/Iris landmark 186 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_187_X,float,Face/Iris landmark 187 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_187_Y,float,Face/Iris landmark 187 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_187_Z,float,"Face/Iris landmark 187 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_188_X,float,Face/Iris landmark 188 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_188_Y,float,Face/Iris landmark 188 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_188_Z,float,"Face/Iris landmark 188 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_189_X,float,Face/Iris landmark 189 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_189_Y,float,Face/Iris landmark 189 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_189_Z,float,"Face/Iris landmark 189 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_190_X,float,Face/Iris landmark 190 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_190_Y,float,Face/Iris landmark 190 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_190_Z,float,"Face/Iris landmark 190 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_191_X,float,Face/Iris landmark 191 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_191_Y,float,Face/Iris landmark 191 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_191_Z,float,"Face/Iris landmark 191 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_192_X,float,Face/Iris landmark 192 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_192_Y,float,Face/Iris landmark 192 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_192_Z,float,"Face/Iris landmark 192 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_193_X,float,Face/Iris landmark 193 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_193_Y,float,Face/Iris landmark 193 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_193_Z,float,"Face/Iris landmark 193 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_194_X,float,Face/Iris landmark 194 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_194_Y,float,Face/Iris landmark 194 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_194_Z,float,"Face/Iris landmark 194 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_195_X,float,Face/Iris landmark 195 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_195_Y,float,Face/Iris landmark 195 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_195_Z,float,"Face/Iris landmark 195 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_196_X,float,Face/Iris landmark 196 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_196_Y,float,Face/Iris landmark 196 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_196_Z,float,"Face/Iris landmark 196 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_197_X,float,Face/Iris landmark 197 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_197_Y,float,Face/Iris landmark 197 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_197_Z,float,"Face/Iris landmark 197 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_198_X,float,Face/Iris landmark 198 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_198_Y,float,Face/Iris landmark 198 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_198_Z,float,"Face/Iris landmark 198 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_199_X,float,Face/Iris landmark 199 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_199_Y,float,Face/Iris landmark 199 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_199_Z,float,"Face/Iris landmark 199 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_200_X,float,Face/Iris landmark 200 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_200_Y,float,Face/Iris landmark 200 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_200_Z,float,"Face/Iris landmark 200 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_201_X,float,Face/Iris landmark 201 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_201_Y,float,Face/Iris landmark 201 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_201_Z,float,"Face/Iris landmark 201 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_202_X,float,Face/Iris landmark 202 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_202_Y,float,Face/Iris landmark 202 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_202_Z,float,"Face/Iris landmark 202 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_203_X,float,Face/Iris landmark 203 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_203_Y,float,Face/Iris landmark 203 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_203_Z,float,"Face/Iris landmark 203 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_204_X,float,Face/Iris landmark 204 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_204_Y,float,Face/Iris landmark 204 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_204_Z,float,"Face/Iris landmark 204 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_205_X,float,Face/Iris landmark 205 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_205_Y,float,Face/Iris landmark 205 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_205_Z,float,"Face/Iris landmark 205 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_206_X,float,Face/Iris landmark 206 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_206_Y,float,Face/Iris landmark 206 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_206_Z,float,"Face/Iris landmark 206 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_207_X,float,Face/Iris landmark 207 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_207_Y,float,Face/Iris landmark 207 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_207_Z,float,"Face/Iris landmark 207 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_208_X,float,Face/Iris landmark 208 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_208_Y,float,Face/Iris landmark 208 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_208_Z,float,"Face/Iris landmark 208 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_209_X,float,Face/Iris landmark 209 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_209_Y,float,Face/Iris landmark 209 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_209_Z,float,"Face/Iris landmark 209 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_210_X,float,Face/Iris landmark 210 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_210_Y,float,Face/Iris landmark 210 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_210_Z,float,"Face/Iris landmark 210 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_211_X,float,Face/Iris landmark 211 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_211_Y,float,Face/Iris landmark 211 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_211_Z,float,"Face/Iris landmark 211 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_212_X,float,Face/Iris landmark 212 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_212_Y,float,Face/Iris landmark 212 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_212_Z,float,"Face/Iris landmark 212 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_213_X,float,Face/Iris landmark 213 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_213_Y,float,Face/Iris landmark 213 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_213_Z,float,"Face/Iris landmark 213 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_214_X,float,Face/Iris landmark 214 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_214_Y,float,Face/Iris landmark 214 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_214_Z,float,"Face/Iris landmark 214 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_215_X,float,Face/Iris landmark 215 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_215_Y,float,Face/Iris landmark 215 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_215_Z,float,"Face/Iris landmark 215 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_216_X,float,Face/Iris landmark 216 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_216_Y,float,Face/Iris landmark 216 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_216_Z,float,"Face/Iris landmark 216 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_217_X,float,Face/Iris landmark 217 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_217_Y,float,Face/Iris landmark 217 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_217_Z,float,"Face/Iris landmark 217 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_218_X,float,Face/Iris landmark 218 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_218_Y,float,Face/Iris landmark 218 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_218_Z,float,"Face/Iris landmark 218 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_219_X,float,Face/Iris landmark 219 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_219_Y,float,Face/Iris landmark 219 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_219_Z,float,"Face/Iris landmark 219 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_220_X,float,Face/Iris landmark 220 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_220_Y,float,Face/Iris landmark 220 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_220_Z,float,"Face/Iris landmark 220 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_221_X,float,Face/Iris landmark 221 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_221_Y,float,Face/Iris landmark 221 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_221_Z,float,"Face/Iris landmark 221 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_222_X,float,Face/Iris landmark 222 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_222_Y,float,Face/Iris landmark 222 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_222_Z,float,"Face/Iris landmark 222 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_223_X,float,Face/Iris landmark 223 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_223_Y,float,Face/Iris landmark 223 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_223_Z,float,"Face/Iris landmark 223 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_224_X,float,Face/Iris landmark 224 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_224_Y,float,Face/Iris landmark 224 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_224_Z,float,"Face/Iris landmark 224 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_225_X,float,Face/Iris landmark 225 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_225_Y,float,Face/Iris landmark 225 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_225_Z,float,"Face/Iris landmark 225 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_226_X,float,Face/Iris landmark 226 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_226_Y,float,Face/Iris landmark 226 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_226_Z,float,"Face/Iris landmark 226 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_227_X,float,Face/Iris landmark 227 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_227_Y,float,Face/Iris landmark 227 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_227_Z,float,"Face/Iris landmark 227 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_228_X,float,Face/Iris landmark 228 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_228_Y,float,Face/Iris landmark 228 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_228_Z,float,"Face/Iris landmark 228 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_229_X,float,Face/Iris landmark 229 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_229_Y,float,Face/Iris landmark 229 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_229_Z,float,"Face/Iris landmark 229 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_230_X,float,Face/Iris landmark 230 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_230_Y,float,Face/Iris landmark 230 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_230_Z,float,"Face/Iris landmark 230 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_231_X,float,Face/Iris landmark 231 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_231_Y,float,Face/Iris landmark 231 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_231_Z,float,"Face/Iris landmark 231 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_232_X,float,Face/Iris landmark 232 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_232_Y,float,Face/Iris landmark 232 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_232_Z,float,"Face/Iris landmark 232 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_233_X,float,Face/Iris landmark 233 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_233_Y,float,Face/Iris landmark 233 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_233_Z,float,"Face/Iris landmark 233 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_234_X,float,Face/Iris landmark 234 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_234_Y,float,Face/Iris landmark 234 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_234_Z,float,"Face/Iris landmark 234 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_235_X,float,Face/Iris landmark 235 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_235_Y,float,Face/Iris landmark 235 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_235_Z,float,"Face/Iris landmark 235 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_236_X,float,Face/Iris landmark 236 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_236_Y,float,Face/Iris landmark 236 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_236_Z,float,"Face/Iris landmark 236 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_237_X,float,Face/Iris landmark 237 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_237_Y,float,Face/Iris landmark 237 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_237_Z,float,"Face/Iris landmark 237 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_238_X,float,Face/Iris landmark 238 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_238_Y,float,Face/Iris landmark 238 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_238_Z,float,"Face/Iris landmark 238 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_239_X,float,Face/Iris landmark 239 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_239_Y,float,Face/Iris landmark 239 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_239_Z,float,"Face/Iris landmark 239 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_240_X,float,Face/Iris landmark 240 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_240_Y,float,Face/Iris landmark 240 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_240_Z,float,"Face/Iris landmark 240 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_241_X,float,Face/Iris landmark 241 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_241_Y,float,Face/Iris landmark 241 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_241_Z,float,"Face/Iris landmark 241 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_242_X,float,Face/Iris landmark 242 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_242_Y,float,Face/Iris landmark 242 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_242_Z,float,"Face/Iris landmark 242 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_243_X,float,Face/Iris landmark 243 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_243_Y,float,Face/Iris landmark 243 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_243_Z,float,"Face/Iris landmark 243 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_244_X,float,Face/Iris landmark 244 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_244_Y,float,Face/Iris landmark 244 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_244_Z,float,"Face/Iris landmark 244 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_245_X,float,Face/Iris landmark 245 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_245_Y,float,Face/Iris landmark 245 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_245_Z,float,"Face/Iris landmark 245 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_246_X,float,Face/Iris landmark 246 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_246_Y,float,Face/Iris landmark 246 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_246_Z,float,"Face/Iris landmark 246 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_247_X,float,Face/Iris landmark 247 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_247_Y,float,Face/Iris landmark 247 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_247_Z,float,"Face/Iris landmark 247 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_248_X,float,Face/Iris landmark 248 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_248_Y,float,Face/Iris landmark 248 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_248_Z,float,"Face/Iris landmark 248 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_249_X,float,Face/Iris landmark 249 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_249_Y,float,Face/Iris landmark 249 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_249_Z,float,"Face/Iris landmark 249 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_250_X,float,Face/Iris landmark 250 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_250_Y,float,Face/Iris landmark 250 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_250_Z,float,"Face/Iris landmark 250 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_251_X,float,Face/Iris landmark 251 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_251_Y,float,Face/Iris landmark 251 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_251_Z,float,"Face/Iris landmark 251 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_252_X,float,Face/Iris landmark 252 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_252_Y,float,Face/Iris landmark 252 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_252_Z,float,"Face/Iris landmark 252 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_253_X,float,Face/Iris landmark 253 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_253_Y,float,Face/Iris landmark 253 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_253_Z,float,"Face/Iris landmark 253 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_254_X,float,Face/Iris landmark 254 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_254_Y,float,Face/Iris landmark 254 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_254_Z,float,"Face/Iris landmark 254 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_255_X,float,Face/Iris landmark 255 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_255_Y,float,Face/Iris landmark 255 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_255_Z,float,"Face/Iris landmark 255 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_256_X,float,Face/Iris landmark 256 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_256_Y,float,Face/Iris landmark 256 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_256_Z,float,"Face/Iris landmark 256 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_257_X,float,Face/Iris landmark 257 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_257_Y,float,Face/Iris landmark 257 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_257_Z,float,"Face/Iris landmark 257 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_258_X,float,Face/Iris landmark 258 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_258_Y,float,Face/Iris landmark 258 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_258_Z,float,"Face/Iris landmark 258 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_259_X,float,Face/Iris landmark 259 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_259_Y,float,Face/Iris landmark 259 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_259_Z,float,"Face/Iris landmark 259 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_260_X,float,Face/Iris landmark 260 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_260_Y,float,Face/Iris landmark 260 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_260_Z,float,"Face/Iris landmark 260 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_261_X,float,Face/Iris landmark 261 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_261_Y,float,Face/Iris landmark 261 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_261_Z,float,"Face/Iris landmark 261 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_262_X,float,Face/Iris landmark 262 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_262_Y,float,Face/Iris landmark 262 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_262_Z,float,"Face/Iris landmark 262 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_263_X,float,Face/Iris landmark 263 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_263_Y,float,Face/Iris landmark 263 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_263_Z,float,"Face/Iris landmark 263 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_264_X,float,Face/Iris landmark 264 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_264_Y,float,Face/Iris landmark 264 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_264_Z,float,"Face/Iris landmark 264 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_265_X,float,Face/Iris landmark 265 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_265_Y,float,Face/Iris landmark 265 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_265_Z,float,"Face/Iris landmark 265 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_266_X,float,Face/Iris landmark 266 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_266_Y,float,Face/Iris landmark 266 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_266_Z,float,"Face/Iris landmark 266 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_267_X,float,Face/Iris landmark 267 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_267_Y,float,Face/Iris landmark 267 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_267_Z,float,"Face/Iris landmark 267 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_268_X,float,Face/Iris landmark 268 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_268_Y,float,Face/Iris landmark 268 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_268_Z,float,"Face/Iris landmark 268 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_269_X,float,Face/Iris landmark 269 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_269_Y,float,Face/Iris landmark 269 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_269_Z,float,"Face/Iris landmark 269 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_270_X,float,Face/Iris landmark 270 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_270_Y,float,Face/Iris landmark 270 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_270_Z,float,"Face/Iris landmark 270 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_271_X,float,Face/Iris landmark 271 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_271_Y,float,Face/Iris landmark 271 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_271_Z,float,"Face/Iris landmark 271 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_272_X,float,Face/Iris landmark 272 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_272_Y,float,Face/Iris landmark 272 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_272_Z,float,"Face/Iris landmark 272 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_273_X,float,Face/Iris landmark 273 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_273_Y,float,Face/Iris landmark 273 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_273_Z,float,"Face/Iris landmark 273 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_274_X,float,Face/Iris landmark 274 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_274_Y,float,Face/Iris landmark 274 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_274_Z,float,"Face/Iris landmark 274 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_275_X,float,Face/Iris landmark 275 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_275_Y,float,Face/Iris landmark 275 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_275_Z,float,"Face/Iris landmark 275 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_276_X,float,Face/Iris landmark 276 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_276_Y,float,Face/Iris landmark 276 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_276_Z,float,"Face/Iris landmark 276 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_277_X,float,Face/Iris landmark 277 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_277_Y,float,Face/Iris landmark 277 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_277_Z,float,"Face/Iris landmark 277 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_278_X,float,Face/Iris landmark 278 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_278_Y,float,Face/Iris landmark 278 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_278_Z,float,"Face/Iris landmark 278 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_279_X,float,Face/Iris landmark 279 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_279_Y,float,Face/Iris landmark 279 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_279_Z,float,"Face/Iris landmark 279 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_280_X,float,Face/Iris landmark 280 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_280_Y,float,Face/Iris landmark 280 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_280_Z,float,"Face/Iris landmark 280 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_281_X,float,Face/Iris landmark 281 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_281_Y,float,Face/Iris landmark 281 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_281_Z,float,"Face/Iris landmark 281 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_282_X,float,Face/Iris landmark 282 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_282_Y,float,Face/Iris landmark 282 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_282_Z,float,"Face/Iris landmark 282 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_283_X,float,Face/Iris landmark 283 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_283_Y,float,Face/Iris landmark 283 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_283_Z,float,"Face/Iris landmark 283 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_284_X,float,Face/Iris landmark 284 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_284_Y,float,Face/Iris landmark 284 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_284_Z,float,"Face/Iris landmark 284 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_285_X,float,Face/Iris landmark 285 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_285_Y,float,Face/Iris landmark 285 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_285_Z,float,"Face/Iris landmark 285 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_286_X,float,Face/Iris landmark 286 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_286_Y,float,Face/Iris landmark 286 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_286_Z,float,"Face/Iris landmark 286 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_287_X,float,Face/Iris landmark 287 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_287_Y,float,Face/Iris landmark 287 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_287_Z,float,"Face/Iris landmark 287 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_288_X,float,Face/Iris landmark 288 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_288_Y,float,Face/Iris landmark 288 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_288_Z,float,"Face/Iris landmark 288 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_289_X,float,Face/Iris landmark 289 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_289_Y,float,Face/Iris landmark 289 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_289_Z,float,"Face/Iris landmark 289 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_290_X,float,Face/Iris landmark 290 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_290_Y,float,Face/Iris landmark 290 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_290_Z,float,"Face/Iris landmark 290 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_291_X,float,Face/Iris landmark 291 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_291_Y,float,Face/Iris landmark 291 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_291_Z,float,"Face/Iris landmark 291 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_292_X,float,Face/Iris landmark 292 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_292_Y,float,Face/Iris landmark 292 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_292_Z,float,"Face/Iris landmark 292 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_293_X,float,Face/Iris landmark 293 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_293_Y,float,Face/Iris landmark 293 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_293_Z,float,"Face/Iris landmark 293 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_294_X,float,Face/Iris landmark 294 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_294_Y,float,Face/Iris landmark 294 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_294_Z,float,"Face/Iris landmark 294 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_295_X,float,Face/Iris landmark 295 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_295_Y,float,Face/Iris landmark 295 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_295_Z,float,"Face/Iris landmark 295 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_296_X,float,Face/Iris landmark 296 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_296_Y,float,Face/Iris landmark 296 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_296_Z,float,"Face/Iris landmark 296 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_297_X,float,Face/Iris landmark 297 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_297_Y,float,Face/Iris landmark 297 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_297_Z,float,"Face/Iris landmark 297 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_298_X,float,Face/Iris landmark 298 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_298_Y,float,Face/Iris landmark 298 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_298_Z,float,"Face/Iris landmark 298 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_299_X,float,Face/Iris landmark 299 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_299_Y,float,Face/Iris landmark 299 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_299_Z,float,"Face/Iris landmark 299 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_300_X,float,Face/Iris landmark 300 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_300_Y,float,Face/Iris landmark 300 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_300_Z,float,"Face/Iris landmark 300 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_301_X,float,Face/Iris landmark 301 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_301_Y,float,Face/Iris landmark 301 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_301_Z,float,"Face/Iris landmark 301 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_302_X,float,Face/Iris landmark 302 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_302_Y,float,Face/Iris landmark 302 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_302_Z,float,"Face/Iris landmark 302 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_303_X,float,Face/Iris landmark 303 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_303_Y,float,Face/Iris landmark 303 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_303_Z,float,"Face/Iris landmark 303 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_304_X,float,Face/Iris landmark 304 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_304_Y,float,Face/Iris landmark 304 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_304_Z,float,"Face/Iris landmark 304 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_305_X,float,Face/Iris landmark 305 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_305_Y,float,Face/Iris landmark 305 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_305_Z,float,"Face/Iris landmark 305 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_306_X,float,Face/Iris landmark 306 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_306_Y,float,Face/Iris landmark 306 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_306_Z,float,"Face/Iris landmark 306 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_307_X,float,Face/Iris landmark 307 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_307_Y,float,Face/Iris landmark 307 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_307_Z,float,"Face/Iris landmark 307 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_308_X,float,Face/Iris landmark 308 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_308_Y,float,Face/Iris landmark 308 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_308_Z,float,"Face/Iris landmark 308 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_309_X,float,Face/Iris landmark 309 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_309_Y,float,Face/Iris landmark 309 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_309_Z,float,"Face/Iris landmark 309 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_310_X,float,Face/Iris landmark 310 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_310_Y,float,Face/Iris landmark 310 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_310_Z,float,"Face/Iris landmark 310 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_311_X,float,Face/Iris landmark 311 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_311_Y,float,Face/Iris landmark 311 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_311_Z,float,"Face/Iris landmark 311 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_312_X,float,Face/Iris landmark 312 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_312_Y,float,Face/Iris landmark 312 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_312_Z,float,"Face/Iris landmark 312 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_313_X,float,Face/Iris landmark 313 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_313_Y,float,Face/Iris landmark 313 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_313_Z,float,"Face/Iris landmark 313 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_314_X,float,Face/Iris landmark 314 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_314_Y,float,Face/Iris landmark 314 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_314_Z,float,"Face/Iris landmark 314 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_315_X,float,Face/Iris landmark 315 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_315_Y,float,Face/Iris landmark 315 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_315_Z,float,"Face/Iris landmark 315 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_316_X,float,Face/Iris landmark 316 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_316_Y,float,Face/Iris landmark 316 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_316_Z,float,"Face/Iris landmark 316 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_317_X,float,Face/Iris landmark 317 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_317_Y,float,Face/Iris landmark 317 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_317_Z,float,"Face/Iris landmark 317 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_318_X,float,Face/Iris landmark 318 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_318_Y,float,Face/Iris landmark 318 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_318_Z,float,"Face/Iris landmark 318 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_319_X,float,Face/Iris landmark 319 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_319_Y,float,Face/Iris landmark 319 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_319_Z,float,"Face/Iris landmark 319 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_320_X,float,Face/Iris landmark 320 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_320_Y,float,Face/Iris landmark 320 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_320_Z,float,"Face/Iris landmark 320 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_321_X,float,Face/Iris landmark 321 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_321_Y,float,Face/Iris landmark 321 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_321_Z,float,"Face/Iris landmark 321 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_322_X,float,Face/Iris landmark 322 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_322_Y,float,Face/Iris landmark 322 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_322_Z,float,"Face/Iris landmark 322 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_323_X,float,Face/Iris landmark 323 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_323_Y,float,Face/Iris landmark 323 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_323_Z,float,"Face/Iris landmark 323 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_324_X,float,Face/Iris landmark 324 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_324_Y,float,Face/Iris landmark 324 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_324_Z,float,"Face/Iris landmark 324 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_325_X,float,Face/Iris landmark 325 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_325_Y,float,Face/Iris landmark 325 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_325_Z,float,"Face/Iris landmark 325 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_326_X,float,Face/Iris landmark 326 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_326_Y,float,Face/Iris landmark 326 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_326_Z,float,"Face/Iris landmark 326 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_327_X,float,Face/Iris landmark 327 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_327_Y,float,Face/Iris landmark 327 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_327_Z,float,"Face/Iris landmark 327 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_328_X,float,Face/Iris landmark 328 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_328_Y,float,Face/Iris landmark 328 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_328_Z,float,"Face/Iris landmark 328 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_329_X,float,Face/Iris landmark 329 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_329_Y,float,Face/Iris landmark 329 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_329_Z,float,"Face/Iris landmark 329 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_330_X,float,Face/Iris landmark 330 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_330_Y,float,Face/Iris landmark 330 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_330_Z,float,"Face/Iris landmark 330 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_331_X,float,Face/Iris landmark 331 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_331_Y,float,Face/Iris landmark 331 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_331_Z,float,"Face/Iris landmark 331 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_332_X,float,Face/Iris landmark 332 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_332_Y,float,Face/Iris landmark 332 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_332_Z,float,"Face/Iris landmark 332 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_333_X,float,Face/Iris landmark 333 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_333_Y,float,Face/Iris landmark 333 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_333_Z,float,"Face/Iris landmark 333 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_334_X,float,Face/Iris landmark 334 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_334_Y,float,Face/Iris landmark 334 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_334_Z,float,"Face/Iris landmark 334 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_335_X,float,Face/Iris landmark 335 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_335_Y,float,Face/Iris landmark 335 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_335_Z,float,"Face/Iris landmark 335 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_336_X,float,Face/Iris landmark 336 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_336_Y,float,Face/Iris landmark 336 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_336_Z,float,"Face/Iris landmark 336 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_337_X,float,Face/Iris landmark 337 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_337_Y,float,Face/Iris landmark 337 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_337_Z,float,"Face/Iris landmark 337 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_338_X,float,Face/Iris landmark 338 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_338_Y,float,Face/Iris landmark 338 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_338_Z,float,"Face/Iris landmark 338 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_339_X,float,Face/Iris landmark 339 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_339_Y,float,Face/Iris landmark 339 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_339_Z,float,"Face/Iris landmark 339 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_340_X,float,Face/Iris landmark 340 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_340_Y,float,Face/Iris landmark 340 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_340_Z,float,"Face/Iris landmark 340 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_341_X,float,Face/Iris landmark 341 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_341_Y,float,Face/Iris landmark 341 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_341_Z,float,"Face/Iris landmark 341 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_342_X,float,Face/Iris landmark 342 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_342_Y,float,Face/Iris landmark 342 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_342_Z,float,"Face/Iris landmark 342 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_343_X,float,Face/Iris landmark 343 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_343_Y,float,Face/Iris landmark 343 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_343_Z,float,"Face/Iris landmark 343 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_344_X,float,Face/Iris landmark 344 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_344_Y,float,Face/Iris landmark 344 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_344_Z,float,"Face/Iris landmark 344 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_345_X,float,Face/Iris landmark 345 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_345_Y,float,Face/Iris landmark 345 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_345_Z,float,"Face/Iris landmark 345 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_346_X,float,Face/Iris landmark 346 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_346_Y,float,Face/Iris landmark 346 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_346_Z,float,"Face/Iris landmark 346 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_347_X,float,Face/Iris landmark 347 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_347_Y,float,Face/Iris landmark 347 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_347_Z,float,"Face/Iris landmark 347 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_348_X,float,Face/Iris landmark 348 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_348_Y,float,Face/Iris landmark 348 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_348_Z,float,"Face/Iris landmark 348 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_349_X,float,Face/Iris landmark 349 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_349_Y,float,Face/Iris landmark 349 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_349_Z,float,"Face/Iris landmark 349 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_350_X,float,Face/Iris landmark 350 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_350_Y,float,Face/Iris landmark 350 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_350_Z,float,"Face/Iris landmark 350 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_351_X,float,Face/Iris landmark 351 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_351_Y,float,Face/Iris landmark 351 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_351_Z,float,"Face/Iris landmark 351 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_352_X,float,Face/Iris landmark 352 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_352_Y,float,Face/Iris landmark 352 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_352_Z,float,"Face/Iris landmark 352 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_353_X,float,Face/Iris landmark 353 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_353_Y,float,Face/Iris landmark 353 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_353_Z,float,"Face/Iris landmark 353 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_354_X,float,Face/Iris landmark 354 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_354_Y,float,Face/Iris landmark 354 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_354_Z,float,"Face/Iris landmark 354 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_355_X,float,Face/Iris landmark 355 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_355_Y,float,Face/Iris landmark 355 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_355_Z,float,"Face/Iris landmark 355 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_356_X,float,Face/Iris landmark 356 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_356_Y,float,Face/Iris landmark 356 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_356_Z,float,"Face/Iris landmark 356 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_357_X,float,Face/Iris landmark 357 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_357_Y,float,Face/Iris landmark 357 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_357_Z,float,"Face/Iris landmark 357 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_358_X,float,Face/Iris landmark 358 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_358_Y,float,Face/Iris landmark 358 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_358_Z,float,"Face/Iris landmark 358 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_359_X,float,Face/Iris landmark 359 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_359_Y,float,Face/Iris landmark 359 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_359_Z,float,"Face/Iris landmark 359 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_360_X,float,Face/Iris landmark 360 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_360_Y,float,Face/Iris landmark 360 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_360_Z,float,"Face/Iris landmark 360 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_361_X,float,Face/Iris landmark 361 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_361_Y,float,Face/Iris landmark 361 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_361_Z,float,"Face/Iris landmark 361 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_362_X,float,Face/Iris landmark 362 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_362_Y,float,Face/Iris landmark 362 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_362_Z,float,"Face/Iris landmark 362 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_363_X,float,Face/Iris landmark 363 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_363_Y,float,Face/Iris landmark 363 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_363_Z,float,"Face/Iris landmark 363 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_364_X,float,Face/Iris landmark 364 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_364_Y,float,Face/Iris landmark 364 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_364_Z,float,"Face/Iris landmark 364 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_365_X,float,Face/Iris landmark 365 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_365_Y,float,Face/Iris landmark 365 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_365_Z,float,"Face/Iris landmark 365 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_366_X,float,Face/Iris landmark 366 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_366_Y,float,Face/Iris landmark 366 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_366_Z,float,"Face/Iris landmark 366 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_367_X,float,Face/Iris landmark 367 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_367_Y,float,Face/Iris landmark 367 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_367_Z,float,"Face/Iris landmark 367 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_368_X,float,Face/Iris landmark 368 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_368_Y,float,Face/Iris landmark 368 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_368_Z,float,"Face/Iris landmark 368 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_369_X,float,Face/Iris landmark 369 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_369_Y,float,Face/Iris landmark 369 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_369_Z,float,"Face/Iris landmark 369 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_370_X,float,Face/Iris landmark 370 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_370_Y,float,Face/Iris landmark 370 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_370_Z,float,"Face/Iris landmark 370 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_371_X,float,Face/Iris landmark 371 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_371_Y,float,Face/Iris landmark 371 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_371_Z,float,"Face/Iris landmark 371 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_372_X,float,Face/Iris landmark 372 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_372_Y,float,Face/Iris landmark 372 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_372_Z,float,"Face/Iris landmark 372 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_373_X,float,Face/Iris landmark 373 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_373_Y,float,Face/Iris landmark 373 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_373_Z,float,"Face/Iris landmark 373 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_374_X,float,Face/Iris landmark 374 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_374_Y,float,Face/Iris landmark 374 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_374_Z,float,"Face/Iris landmark 374 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_375_X,float,Face/Iris landmark 375 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_375_Y,float,Face/Iris landmark 375 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_375_Z,float,"Face/Iris landmark 375 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_376_X,float,Face/Iris landmark 376 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_376_Y,float,Face/Iris landmark 376 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_376_Z,float,"Face/Iris landmark 376 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_377_X,float,Face/Iris landmark 377 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_377_Y,float,Face/Iris landmark 377 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_377_Z,float,"Face/Iris landmark 377 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_378_X,float,Face/Iris landmark 378 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_378_Y,float,Face/Iris landmark 378 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_378_Z,float,"Face/Iris landmark 378 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_379_X,float,Face/Iris landmark 379 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_379_Y,float,Face/Iris landmark 379 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_379_Z,float,"Face/Iris landmark 379 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_380_X,float,Face/Iris landmark 380 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_380_Y,float,Face/Iris landmark 380 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_380_Z,float,"Face/Iris landmark 380 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_381_X,float,Face/Iris landmark 381 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_381_Y,float,Face/Iris landmark 381 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_381_Z,float,"Face/Iris landmark 381 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_382_X,float,Face/Iris landmark 382 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_382_Y,float,Face/Iris landmark 382 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_382_Z,float,"Face/Iris landmark 382 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_383_X,float,Face/Iris landmark 383 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_383_Y,float,Face/Iris landmark 383 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_383_Z,float,"Face/Iris landmark 383 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_384_X,float,Face/Iris landmark 384 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_384_Y,float,Face/Iris landmark 384 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_384_Z,float,"Face/Iris landmark 384 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_385_X,float,Face/Iris landmark 385 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_385_Y,float,Face/Iris landmark 385 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_385_Z,float,"Face/Iris landmark 385 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_386_X,float,Face/Iris landmark 386 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_386_Y,float,Face/Iris landmark 386 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_386_Z,float,"Face/Iris landmark 386 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_387_X,float,Face/Iris landmark 387 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_387_Y,float,Face/Iris landmark 387 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_387_Z,float,"Face/Iris landmark 387 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_388_X,float,Face/Iris landmark 388 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_388_Y,float,Face/Iris landmark 388 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_388_Z,float,"Face/Iris landmark 388 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_389_X,float,Face/Iris landmark 389 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_389_Y,float,Face/Iris landmark 389 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_389_Z,float,"Face/Iris landmark 389 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_390_X,float,Face/Iris landmark 390 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_390_Y,float,Face/Iris landmark 390 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_390_Z,float,"Face/Iris landmark 390 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_391_X,float,Face/Iris landmark 391 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_391_Y,float,Face/Iris landmark 391 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_391_Z,float,"Face/Iris landmark 391 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_392_X,float,Face/Iris landmark 392 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_392_Y,float,Face/Iris landmark 392 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_392_Z,float,"Face/Iris landmark 392 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_393_X,float,Face/Iris landmark 393 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_393_Y,float,Face/Iris landmark 393 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_393_Z,float,"Face/Iris landmark 393 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_394_X,float,Face/Iris landmark 394 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_394_Y,float,Face/Iris landmark 394 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_394_Z,float,"Face/Iris landmark 394 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_395_X,float,Face/Iris landmark 395 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_395_Y,float,Face/Iris landmark 395 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_395_Z,float,"Face/Iris landmark 395 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_396_X,float,Face/Iris landmark 396 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_396_Y,float,Face/Iris landmark 396 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_396_Z,float,"Face/Iris landmark 396 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_397_X,float,Face/Iris landmark 397 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_397_Y,float,Face/Iris landmark 397 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_397_Z,float,"Face/Iris landmark 397 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_398_X,float,Face/Iris landmark 398 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_398_Y,float,Face/Iris landmark 398 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_398_Z,float,"Face/Iris landmark 398 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_399_X,float,Face/Iris landmark 399 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_399_Y,float,Face/Iris landmark 399 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_399_Z,float,"Face/Iris landmark 399 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_400_X,float,Face/Iris landmark 400 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_400_Y,float,Face/Iris landmark 400 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_400_Z,float,"Face/Iris landmark 400 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_401_X,float,Face/Iris landmark 401 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_401_Y,float,Face/Iris landmark 401 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_401_Z,float,"Face/Iris landmark 401 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_402_X,float,Face/Iris landmark 402 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_402_Y,float,Face/Iris landmark 402 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_402_Z,float,"Face/Iris landmark 402 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_403_X,float,Face/Iris landmark 403 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_403_Y,float,Face/Iris landmark 403 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_403_Z,float,"Face/Iris landmark 403 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_404_X,float,Face/Iris landmark 404 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_404_Y,float,Face/Iris landmark 404 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_404_Z,float,"Face/Iris landmark 404 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_405_X,float,Face/Iris landmark 405 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_405_Y,float,Face/Iris landmark 405 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_405_Z,float,"Face/Iris landmark 405 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_406_X,float,Face/Iris landmark 406 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_406_Y,float,Face/Iris landmark 406 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_406_Z,float,"Face/Iris landmark 406 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_407_X,float,Face/Iris landmark 407 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_407_Y,float,Face/Iris landmark 407 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_407_Z,float,"Face/Iris landmark 407 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_408_X,float,Face/Iris landmark 408 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_408_Y,float,Face/Iris landmark 408 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_408_Z,float,"Face/Iris landmark 408 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_409_X,float,Face/Iris landmark 409 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_409_Y,float,Face/Iris landmark 409 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_409_Z,float,"Face/Iris landmark 409 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_410_X,float,Face/Iris landmark 410 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_410_Y,float,Face/Iris landmark 410 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_410_Z,float,"Face/Iris landmark 410 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_411_X,float,Face/Iris landmark 411 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_411_Y,float,Face/Iris landmark 411 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_411_Z,float,"Face/Iris landmark 411 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_412_X,float,Face/Iris landmark 412 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_412_Y,float,Face/Iris landmark 412 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_412_Z,float,"Face/Iris landmark 412 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_413_X,float,Face/Iris landmark 413 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_413_Y,float,Face/Iris landmark 413 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_413_Z,float,"Face/Iris landmark 413 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_414_X,float,Face/Iris landmark 414 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_414_Y,float,Face/Iris landmark 414 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_414_Z,float,"Face/Iris landmark 414 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_415_X,float,Face/Iris landmark 415 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_415_Y,float,Face/Iris landmark 415 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_415_Z,float,"Face/Iris landmark 415 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_416_X,float,Face/Iris landmark 416 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_416_Y,float,Face/Iris landmark 416 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_416_Z,float,"Face/Iris landmark 416 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_417_X,float,Face/Iris landmark 417 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_417_Y,float,Face/Iris landmark 417 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_417_Z,float,"Face/Iris landmark 417 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_418_X,float,Face/Iris landmark 418 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_418_Y,float,Face/Iris landmark 418 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_418_Z,float,"Face/Iris landmark 418 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_419_X,float,Face/Iris landmark 419 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_419_Y,float,Face/Iris landmark 419 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_419_Z,float,"Face/Iris landmark 419 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_420_X,float,Face/Iris landmark 420 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_420_Y,float,Face/Iris landmark 420 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_420_Z,float,"Face/Iris landmark 420 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_421_X,float,Face/Iris landmark 421 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_421_Y,float,Face/Iris landmark 421 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_421_Z,float,"Face/Iris landmark 421 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_422_X,float,Face/Iris landmark 422 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_422_Y,float,Face/Iris landmark 422 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_422_Z,float,"Face/Iris landmark 422 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_423_X,float,Face/Iris landmark 423 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_423_Y,float,Face/Iris landmark 423 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_423_Z,float,"Face/Iris landmark 423 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_424_X,float,Face/Iris landmark 424 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_424_Y,float,Face/Iris landmark 424 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_424_Z,float,"Face/Iris landmark 424 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_425_X,float,Face/Iris landmark 425 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_425_Y,float,Face/Iris landmark 425 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_425_Z,float,"Face/Iris landmark 425 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_426_X,float,Face/Iris landmark 426 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_426_Y,float,Face/Iris landmark 426 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_426_Z,float,"Face/Iris landmark 426 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_427_X,float,Face/Iris landmark 427 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_427_Y,float,Face/Iris landmark 427 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_427_Z,float,"Face/Iris landmark 427 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_428_X,float,Face/Iris landmark 428 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_428_Y,float,Face/Iris landmark 428 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_428_Z,float,"Face/Iris landmark 428 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_429_X,float,Face/Iris landmark 429 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_429_Y,float,Face/Iris landmark 429 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_429_Z,float,"Face/Iris landmark 429 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_430_X,float,Face/Iris landmark 430 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_430_Y,float,Face/Iris landmark 430 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_430_Z,float,"Face/Iris landmark 430 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_431_X,float,Face/Iris landmark 431 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_431_Y,float,Face/Iris landmark 431 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_431_Z,float,"Face/Iris landmark 431 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_432_X,float,Face/Iris landmark 432 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_432_Y,float,Face/Iris landmark 432 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_432_Z,float,"Face/Iris landmark 432 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_433_X,float,Face/Iris landmark 433 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_433_Y,float,Face/Iris landmark 433 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_433_Z,float,"Face/Iris landmark 433 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_434_X,float,Face/Iris landmark 434 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_434_Y,float,Face/Iris landmark 434 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_434_Z,float,"Face/Iris landmark 434 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_435_X,float,Face/Iris landmark 435 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_435_Y,float,Face/Iris landmark 435 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_435_Z,float,"Face/Iris landmark 435 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_436_X,float,Face/Iris landmark 436 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_436_Y,float,Face/Iris landmark 436 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_436_Z,float,"Face/Iris landmark 436 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_437_X,float,Face/Iris landmark 437 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_437_Y,float,Face/Iris landmark 437 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_437_Z,float,"Face/Iris landmark 437 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_438_X,float,Face/Iris landmark 438 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_438_Y,float,Face/Iris landmark 438 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_438_Z,float,"Face/Iris landmark 438 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_439_X,float,Face/Iris landmark 439 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_439_Y,float,Face/Iris landmark 439 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_439_Z,float,"Face/Iris landmark 439 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_440_X,float,Face/Iris landmark 440 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_440_Y,float,Face/Iris landmark 440 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_440_Z,float,"Face/Iris landmark 440 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_441_X,float,Face/Iris landmark 441 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_441_Y,float,Face/Iris landmark 441 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_441_Z,float,"Face/Iris landmark 441 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_442_X,float,Face/Iris landmark 442 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_442_Y,float,Face/Iris landmark 442 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_442_Z,float,"Face/Iris landmark 442 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_443_X,float,Face/Iris landmark 443 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_443_Y,float,Face/Iris landmark 443 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_443_Z,float,"Face/Iris landmark 443 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_444_X,float,Face/Iris landmark 444 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_444_Y,float,Face/Iris landmark 444 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_444_Z,float,"Face/Iris landmark 444 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_445_X,float,Face/Iris landmark 445 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_445_Y,float,Face/Iris landmark 445 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_445_Z,float,"Face/Iris landmark 445 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_446_X,float,Face/Iris landmark 446 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_446_Y,float,Face/Iris landmark 446 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_446_Z,float,"Face/Iris landmark 446 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_447_X,float,Face/Iris landmark 447 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_447_Y,float,Face/Iris landmark 447 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_447_Z,float,"Face/Iris landmark 447 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_448_X,float,Face/Iris landmark 448 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_448_Y,float,Face/Iris landmark 448 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_448_Z,float,"Face/Iris landmark 448 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_449_X,float,Face/Iris landmark 449 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_449_Y,float,Face/Iris landmark 449 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_449_Z,float,"Face/Iris landmark 449 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_450_X,float,Face/Iris landmark 450 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_450_Y,float,Face/Iris landmark 450 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_450_Z,float,"Face/Iris landmark 450 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_451_X,float,Face/Iris landmark 451 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_451_Y,float,Face/Iris landmark 451 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_451_Z,float,"Face/Iris landmark 451 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_452_X,float,Face/Iris landmark 452 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_452_Y,float,Face/Iris landmark 452 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_452_Z,float,"Face/Iris landmark 452 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_453_X,float,Face/Iris landmark 453 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_453_Y,float,Face/Iris landmark 453 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_453_Z,float,"Face/Iris landmark 453 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_454_X,float,Face/Iris landmark 454 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_454_Y,float,Face/Iris landmark 454 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_454_Z,float,"Face/Iris landmark 454 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_455_X,float,Face/Iris landmark 455 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_455_Y,float,Face/Iris landmark 455 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_455_Z,float,"Face/Iris landmark 455 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_456_X,float,Face/Iris landmark 456 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_456_Y,float,Face/Iris landmark 456 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_456_Z,float,"Face/Iris landmark 456 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_457_X,float,Face/Iris landmark 457 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_457_Y,float,Face/Iris landmark 457 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_457_Z,float,"Face/Iris landmark 457 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_458_X,float,Face/Iris landmark 458 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_458_Y,float,Face/Iris landmark 458 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_458_Z,float,"Face/Iris landmark 458 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_459_X,float,Face/Iris landmark 459 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_459_Y,float,Face/Iris landmark 459 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_459_Z,float,"Face/Iris landmark 459 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_460_X,float,Face/Iris landmark 460 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_460_Y,float,Face/Iris landmark 460 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_460_Z,float,"Face/Iris landmark 460 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_461_X,float,Face/Iris landmark 461 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_461_Y,float,Face/Iris landmark 461 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_461_Z,float,"Face/Iris landmark 461 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_462_X,float,Face/Iris landmark 462 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_462_Y,float,Face/Iris landmark 462 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_462_Z,float,"Face/Iris landmark 462 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_463_X,float,Face/Iris landmark 463 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_463_Y,float,Face/Iris landmark 463 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_463_Z,float,"Face/Iris landmark 463 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_464_X,float,Face/Iris landmark 464 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_464_Y,float,Face/Iris landmark 464 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_464_Z,float,"Face/Iris landmark 464 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_465_X,float,Face/Iris landmark 465 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_465_Y,float,Face/Iris landmark 465 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_465_Z,float,"Face/Iris landmark 465 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_466_X,float,Face/Iris landmark 466 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_466_Y,float,Face/Iris landmark 466 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_466_Z,float,"Face/Iris landmark 466 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_467_X,float,Face/Iris landmark 467 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_467_Y,float,Face/Iris landmark 467 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_467_Z,float,"Face/Iris landmark 467 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_468_X,float,Face/Iris landmark 468 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_468_Y,float,Face/Iris landmark 468 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_468_Z,float,"Face/Iris landmark 468 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_469_X,float,Face/Iris landmark 469 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_469_Y,float,Face/Iris landmark 469 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_469_Z,float,"Face/Iris landmark 469 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_470_X,float,Face/Iris landmark 470 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_470_Y,float,Face/Iris landmark 470 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_470_Z,float,"Face/Iris landmark 470 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_471_X,float,Face/Iris landmark 471 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_471_Y,float,Face/Iris landmark 471 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_471_Z,float,"Face/Iris landmark 471 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_472_X,float,Face/Iris landmark 472 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_472_Y,float,Face/Iris landmark 472 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_472_Z,float,"Face/Iris landmark 472 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_473_X,float,Face/Iris landmark 473 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_473_Y,float,Face/Iris landmark 473 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_473_Z,float,"Face/Iris landmark 473 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_474_X,float,Face/Iris landmark 474 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_474_Y,float,Face/Iris landmark 474 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_474_Z,float,"Face/Iris landmark 474 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_475_X,float,Face/Iris landmark 475 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_475_Y,float,Face/Iris landmark 475 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_475_Z,float,"Face/Iris landmark 475 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_476_X,float,Face/Iris landmark 476 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_476_Y,float,Face/Iris landmark 476 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_476_Z,float,"Face/Iris landmark 476 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Landmark_477_X,float,Face/Iris landmark 477 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_477_Y,float,Face/Iris landmark 477 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Landmark_477_Z,float,"Face/Iris landmark 477 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_0_X,float,Pose landmark 0 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_0_Y,float,Pose landmark 0 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_0_Z,float,"Pose landmark 0 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_1_X,float,Pose landmark 1 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_1_Y,float,Pose landmark 1 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_1_Z,float,"Pose landmark 1 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_2_X,float,Pose landmark 2 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_2_Y,float,Pose landmark 2 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_2_Z,float,"Pose landmark 2 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_3_X,float,Pose landmark 3 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_3_Y,float,Pose landmark 3 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_3_Z,float,"Pose landmark 3 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_4_X,float,Pose landmark 4 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_4_Y,float,Pose landmark 4 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_4_Z,float,"Pose landmark 4 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_5_X,float,Pose landmark 5 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_5_Y,float,Pose landmark 5 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_5_Z,float,"Pose landmark 5 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_6_X,float,Pose landmark 6 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_6_Y,float,Pose landmark 6 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_6_Z,float,"Pose landmark 6 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_7_X,float,Pose landmark 7 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_7_Y,float,Pose landmark 7 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_7_Z,float,"Pose landmark 7 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_8_X,float,Pose landmark 8 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_8_Y,float,Pose landmark 8 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_8_Z,float,"Pose landmark 8 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_9_X,float,Pose landmark 9 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_9_Y,float,Pose landmark 9 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_9_Z,float,"Pose landmark 9 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_10_X,float,Pose landmark 10 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_10_Y,float,Pose landmark 10 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_10_Z,float,"Pose landmark 10 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_11_X,float,Pose landmark 11 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_11_Y,float,Pose landmark 11 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_11_Z,float,"Pose landmark 11 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_12_X,float,Pose landmark 12 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_12_Y,float,Pose landmark 12 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_12_Z,float,"Pose landmark 12 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_13_X,float,Pose landmark 13 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_13_Y,float,Pose landmark 13 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_13_Z,float,"Pose landmark 13 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_14_X,float,Pose landmark 14 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_14_Y,float,Pose landmark 14 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_14_Z,float,"Pose landmark 14 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_15_X,float,Pose landmark 15 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_15_Y,float,Pose landmark 15 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_15_Z,float,"Pose landmark 15 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_16_X,float,Pose landmark 16 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_16_Y,float,Pose landmark 16 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_16_Z,float,"Pose landmark 16 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_17_X,float,Pose landmark 17 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_17_Y,float,Pose landmark 17 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_17_Z,float,"Pose landmark 17 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_18_X,float,Pose landmark 18 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_18_Y,float,Pose landmark 18 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_18_Z,float,"Pose landmark 18 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_19_X,float,Pose landmark 19 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_19_Y,float,Pose landmark 19 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_19_Z,float,"Pose landmark 19 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_20_X,float,Pose landmark 20 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_20_Y,float,Pose landmark 20 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_20_Z,float,"Pose landmark 20 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_21_X,float,Pose landmark 21 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_21_Y,float,Pose landmark 21 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_21_Z,float,"Pose landmark 21 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_22_X,float,Pose landmark 22 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_22_Y,float,Pose landmark 22 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_22_Z,float,"Pose landmark 22 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_23_X,float,Pose landmark 23 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_23_Y,float,Pose landmark 23 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_23_Z,float,"Pose landmark 23 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_24_X,float,Pose landmark 24 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_24_Y,float,Pose landmark 24 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_24_Z,float,"Pose landmark 24 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_25_X,float,Pose landmark 25 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_25_Y,float,Pose landmark 25 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_25_Z,float,"Pose landmark 25 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_26_X,float,Pose landmark 26 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_26_Y,float,Pose landmark 26 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_26_Z,float,"Pose landmark 26 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_27_X,float,Pose landmark 27 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_27_Y,float,Pose landmark 27 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_27_Z,float,"Pose landmark 27 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_28_X,float,Pose landmark 28 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_28_Y,float,Pose landmark 28 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_28_Z,float,"Pose landmark 28 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_29_X,float,Pose landmark 29 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_29_Y,float,Pose landmark 29 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_29_Z,float,"Pose landmark 29 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_30_X,float,Pose landmark 30 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_30_Y,float,Pose landmark 30 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_30_Z,float,"Pose landmark 30 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_31_X,float,Pose landmark 31 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_31_Y,float,Pose landmark 31 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_31_Z,float,"Pose landmark 31 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Pose_32_X,float,Pose landmark 32 X coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_32_Y,float,Pose landmark 32 Y coordinate (normalized 0-1),-,0.0 to 1.0,0.0 if not detected
+Pose_32_Z,float,"Pose landmark 32 Z coordinate (depth, relative scale)",-,real,0.0 if not detected
+Class,integer,Ground truth label,-,"0=truth, 1=lie",N/A
+reextraction_triggered,boolean,Whether re-extraction was triggered for this file,-,true/false,false
+reextraction_success,boolean,Whether re-extraction succeeded,-,true/false,false
+reextraction_params,string,JSON string of re-extraction parameters,-,JSON,empty string

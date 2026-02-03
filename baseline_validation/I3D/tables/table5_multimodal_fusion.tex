@@ -1,0 +1,24 @@
+\begin{table*}[htbp]
+\centering
+\caption{Multimodal Fusion Results}
+\label{tab:multimodal_fusion}
+\begin{tabular}{llccccc}
+\hline
+\textbf{Fusion Type} & \textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{AUC} \\
+\hline
+Fusion Indonesian & Random Forest & 0.5573 & 0.5549 & 0.5796 & 0.5670 & 0.5580 \\
+Fusion Indonesian & SVM & 0.5701 & 0.5733 & 0.5478 & 0.5603 & 0.6068 \\
+Fusion Indonesian & Gradient Boosting & 0.5318 & 0.5301 & 0.5605 & 0.5449 & 0.5423 \\
+\hline
+Fusion English & Random Forest & 0.5573 & 0.5584 & 0.5478 & 0.5531 & 0.5832 \\
+Fusion English & SVM & 0.5892 & 0.5875 & 0.5987 & 0.5931 & 0.6219 \\
+Fusion English & Gradient Boosting & 0.5796 & 0.5767 & 0.5987 & 0.5875 & 0.6414 \\
+\hline
+Late Fusion Indonesian & Average & 0.5764 & 0.5741 & 0.5924 & 0.5831 & 0.5860 \\
+Late Fusion Indonesian & Weighted (0.6 text, 0.4 audio) & 0.5669 & 0.5636 & 0.5924 & 0.5776 & 0.5874 \\
+Late Fusion Indonesian & Weighted (0.4 text, 0.6 audio) & 0.5701 & 0.5679 & 0.5860 & 0.5768 & 0.5801 \\
+Late Fusion Indonesian & Max & 0.5287 & 0.5204 & 0.7325 & 0.6085 & 0.5640 \\
+Late Fusion Indonesian & Product & 0.5701 & 0.5696 & 0.5732 & 0.5714 & 0.5879 \\
+\hline
+\end{tabular}
+\end{table*}

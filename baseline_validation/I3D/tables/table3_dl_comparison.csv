@@ -1,0 +1,4 @@
+Category,Model,Architecture,Accuracy,Precision,Recall,F1-Score,ROC-AUC,Parameters
+Deep Learning,LSTM (audio),Bi-LSTM: 64 units × 2 layers,0.5127,0.5128,0.5096,0.5112,0.5381,"~XXX,XXX"
+Deep Learning,CNN (audio),1D-CNN: 64 filters × 2 layers,0.5255,0.5299,0.4522,0.4880,0.5248,"~XXX,XXX"
+Traditional ML,Random Forest (landmark),Traditional ML,0.6433,0.6380,0.6624,0.6500,0.7159,Varies

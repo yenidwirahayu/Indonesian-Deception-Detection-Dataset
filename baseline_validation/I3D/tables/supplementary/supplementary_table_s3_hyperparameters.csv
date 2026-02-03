@@ -1,0 +1,23 @@
+Category,Parameter,Value
+General,Random State,42
+General,Test Size,0.2
+General,CV Folds,5
+General,Class Balancing,True
+General,Balancing Method,smote
+Text Models,Logistic Regression,"max_iter=1000, solver=liblinear"
+Text Models,Random Forest,"n_estimators=100, n_jobs=-1"
+Text Models,SVM,"kernel=rbf, gamma=scale"
+Text Models,Naive Bayes,default
+Audio Models,Random Forest,"n_estimators=100, n_jobs=-1"
+Audio Models,SVM,"kernel=rbf, gamma=scale"
+Audio Models,Gradient Boosting,n_estimators=100
+Audio Models,MLP,"hidden_layers=(100,50), max_iter=500"
+Audio Models,XGBoost,"n_estimators=100, eval_metric=logloss"
+Audio Models,LightGBM,"n_estimators=100, verbose=-1"
+Deep Learning,LSTM Units,64
+Deep Learning,CNN Filters,64
+Deep Learning,Attention Heads,4
+Deep Learning,Dropout Rate,0.3
+Deep Learning,Batch Size,16
+Deep Learning,Epochs,50
+Deep Learning,Patience,10
